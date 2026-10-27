@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luméa Skin Studio | Advanced Facials & Light Therapy</title>
+  <meta name="description" content="Luméa Skin Studio: medical-grade HydraFacials, LED light therapy, microcurrent and signature facials by licensed estheticians." />
+  <meta name="theme-color" content="#120c10" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M16 58V28a16 16 0 0 1 32 0v30' fill='none' stroke='%23e9c6c9' stroke-width='5'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader">
+    <svg class="loader__arch" viewBox="0 0 120 160" aria-hidden="true">
+      <path d="M20 150V60a40 40 0 0 1 80 0v90" />
+    </svg>
+    <div class="loader__brand">Luméa</div>
+    <div class="loader__count"><span id="loaderCount">0</span>%</div>
+  </div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span>View</span></div></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Luméa home">
+      <svg viewBox="0 0 24 32" aria-hidden="true"><path d="M3 31V12a9 9 0 0 1 18 0v19" /></svg>
+      <span>Luméa</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#treatments">Treatments</a>
+      <a href="#technology">Technology</a>
+      <a href="#studio">The Studio</a>
+      <a href="#journey">Your Visit</a>
+      <a href="#membership">Membership</a>
+    </nav>
+    <a href="#book" class="btn btn--glass nav__cta magnetic">Book a Visit</a>
+    <button class="nav__burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+
+  <div class="menu" id="menu">
+    <a href="#treatments">Treatments</a>
+    <a href="#technology">Technology</a>
+    <a href="#studio">The Studio</a>
+    <a href="#journey">Your Visit</a>
+    <a href="#membership">Membership</a>
+    <a href="#book">Book a Visit</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO (Three.js) ============ -->
+    <section class="hero" id="hero">
+      <canvas id="webgl" aria-hidden="true"></canvas>
+      <div class="hero__vignette"></div>
+      <div class="hero__content">
+        <p class="eyebrow hero__eyebrow"><span class="dot"></span> Advanced Skin Clinic &middot; Los Angeles</p>
+        <h1 class="hero__title">
+          <span class="line"><span class="line__inner">Where science</span></span>
+          <span class="line"><span class="line__inner">meets <em>glow.</em></span></span>
+        </h1>
+        <p class="hero__sub">Medical-grade facials, LED light therapy and hydra-dermabrasion, performed by licensed estheticians in a studio designed for stillness.</p>
+        <div class="hero__actions">
+          <a href="#book" class="btn btn--light magnetic">Book a consultation <i class="arrow"></i></a>
+          <a href="#treatments" class="btn btn--ghost magnetic">Explore treatments</a>
+        </div>
+      </div>
+      <div class="hero__meta">
+        <div><strong>4.9</strong><span>Google rating</span></div>
+        <div><strong>12k+</strong><span>Treatments</span></div>
+        <div><strong>Licensed</strong><span>Estheticians</span></div>
+      </div>
+      <div class="hero__scroll"><span>Scroll</span><i></i></div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>HydraFacial</span><b>✦</b><span>LED Light Therapy</span><b>✦</b><span>Microcurrent Lift</span><b>✦</b><span>Oxygen Infusion</span><b>✦</b><span>Chemical Peels</span><b>✦</b><span>Dermaplaning</span><b>✦</b>
+        <span>HydraFacial</span><b>✦</b><span>LED Light Therapy</span><b>✦</b><span>Microcurrent Lift</span><b>✦</b><span>Oxygen Infusion</span><b>✦</b><span>Chemical Peels</span><b>✦</b><span>Dermaplaning</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ============ PHILOSOPHY ============ -->
+    <section class="intro" id="about" data-nav="light">
+      <div class="container intro__grid">
+        <div class="intro__media">
+          <div class="tilt intro__card" data-cursor="View">
+            <img src="assets/img/arch-room.jpg" alt="Luméa treatment room with a glowing arched niche and wooden shelves of skincare" />
+            <div class="tilt__shine"></div>
+          </div>
+          <div class="intro__badge">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs>
+              <text><textPath href="#circ">MEDICAL GRADE &#8226; CLEAN SKINCARE &#8226; CALM SPACE &#8226;</textPath></text>
+            </svg>
+            <span>✦</span>
+          </div>
+        </div>
+        <div class="intro__text">
+          <p class="eyebrow">Our philosophy</p>
+          <p class="scrub-text" id="scrubText">Radiant skin isn't a trend. It's a ritual of science, patience and touch. Every treatment at Luméa starts with understanding your skin, never with a sales pitch.</p>
+          <div class="stats">
+            <div class="stat"><strong data-count="12000" data-suffix="+">0</strong><span>Treatments performed</span></div>
+            <div class="stat"><strong data-count="4.9" data-decimals="1">0</strong><span>Average client rating</span></div>
+            <div class="stat"><strong data-count="9" data-suffix=" yrs">0</strong><span>Of clinical practice</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TREATMENTS (horizontal) ============ -->
+    <section class="treatments" id="treatments" data-nav="light">
+      <div class="treatments__pin">
+        <div class="treatments__head container">
+          <div>
+            <p class="eyebrow">Signature treatments</p>
+            <h2 class="section-title reveal-title">Tailored to <em>your</em> skin,<br />never one-size-fits-all.</h2>
+          </div>
+          <div class="treatments__progress"><span id="tProgress"></span></div>
+        </div>
+        <div class="treatments__track" id="tTrack">
+          <article class="tcard" data-cursor="Book">
+            <div class="tcard__img"><img src="assets/img/hydra-device.jpg" alt="Multi-handpiece hydra-dermabrasion device with LED mask" /></div>
+            <div class="tcard__body">
+              <span class="tcard__num">01</span>
+              <h3>HydraFacial Signature</h3>
+              <p>Cleanse, extract and hydrate in one pass. Vortex suction lifts congestion while serums flood the skin with moisture.</p>
+              <div class="tcard__meta"><span>60 min</span><span>from $199</span></div>
+            </div>
+            <div class="tilt__shine"></div>
+          </article>
+          <article class="tcard" data-cursor="Book">
+            <div class="tcard__img"><img src="assets/img/glow-suite.jpg" alt="Treatment suite glowing with a pink and violet halo light" /></div>
+            <div class="tcard__body">
+              <span class="tcard__num">02</span>
+              <h3>LED Light Therapy</h3>
+              <p>Red 633nm and blue 415nm wavelengths calm breakouts, soften redness and help your skin rebuild collagen.</p>
+              <div class="tcard__meta"><span>30 min</span><span>from $89</span></div>
+            </div>
+            <div class="tilt__shine"></div>
+          </article>
+          <article class="tcard" data-cursor="Book">
+            <div class="tcard__img"><img src="assets/img/microcurrent.jpg" alt="Esthetician performing a microcurrent facial with handheld probes" /></div>
+            <div class="tcard__body">
+              <span class="tcard__num">03</span>
+              <h3>Microcurrent Lift</h3>
+              <p>A non-invasive facial workout. Gentle currents tone the muscles that sculpt your cheekbones and jawline.</p>
+              <div class="tcard__meta"><span>45 min</span><span>from $149</span></div>
+            </div>
+            <div class="tilt__shine"></div>
+          </article>
+          <article class="tcard" data-cursor="Book">
+            <div class="tcard__img"><img src="assets/img/signature-facial.jpg" alt="Client relaxing under a hydrating sheet mask during a facial" /></div>
+            <div class="tcard__body">
+              <span class="tcard__num">04</span>
+              <h3>Oxygen Infusion Facial</h3>
+              <p>High-frequency therapy followed by a cooling infusion mask for instantly plumped, luminous skin.</p>
+              <div class="tcard__meta"><span>50 min</span><span>from $169</span></div>
+            </div>
+            <div class="tilt__shine"></div>
+          </article>
+          <article class="tcard" data-cursor="Book">
+            <div class="tcard__img"><img src="assets/img/arch-room.jpg" alt="Softly lit arch room prepared for the signature ritual" /></div>
+            <div class="tcard__body">
+              <span class="tcard__num">05</span>
+              <h3>The Arch Ritual</h3>
+              <p>Our 90-minute signature: double cleanse, enzyme peel, lymphatic massage and LED, finished with a hot-towel press.</p>
+              <div class="tcard__meta"><span>90 min</span><span>from $289</span></div>
+            </div>
+            <div class="tilt__shine"></div>
+          </article>
+          <div class="tcard tcard--cta">
+            <p class="eyebrow">Not sure where to start?</p>
+            <h3>Book a complimentary skin analysis.</h3>
+            <a href="#book" class="btn btn--dark magnetic">Start here <i class="arrow"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECHNOLOGY ============ -->
+    <section class="tech" id="technology">
+      <div class="container tech__grid">
+        <div class="tech__sticky">
+          <div class="tech__stage">
+            <div class="tech__device" id="techDevice">
+              <img src="assets/img/hydra-device.jpg" alt="7-in-1 hydra skin system with multiple handpieces and an LED face mask" />
+              <button class="hotspot" style="top:34%;left:62%" data-i="0" aria-label="Handpieces"></button>
+              <button class="hotspot" style="top:47%;left:43%" data-i="1" aria-label="Touch display"></button>
+              <button class="hotspot" style="top:88%;left:48%" data-i="2" aria-label="LED mask"></button>
+            </div>
+            <div class="tech__glow"></div>
+          </div>
+        </div>
+        <div class="tech__list">
+          <p class="eyebrow eyebrow--light">The technology</p>
+          <h2 class="section-title section-title--light reveal-title">Clinical tools.<br /><em>Gentle</em> hands.</h2>
+          <div class="tech__item" data-i="0">
+            <span>01</span>
+            <div><h3>7-in-1 Hydra System</h3><p>Hydra-dermabrasion, ultrasonic scrubbing, RF and cryo handpieces working together in one treatment.</p></div>
+          </div>
+          <div class="tech__item" data-i="1">
+            <span>02</span>
+            <div><h3>Smart skin mapping</h3><p>Every session is calibrated on-screen to your skin type, sensitivity and goals, then saved for next time.</p></div>
+          </div>
+          <div class="tech__item" data-i="2">
+            <span>03</span>
+            <div><h3>Medical LED mask</h3><p>Full-face photon therapy at clinically studied wavelengths. No heat, no downtime, just calm, even skin.</p></div>
+          </div>
+          <div class="tech__item" data-i="3">
+            <span>04</span>
+            <div><h3>High-frequency &amp; microcurrent</h3><p>Antibacterial argon glow for breakouts and micro-toning currents for lift, both precise to the millimetre.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STUDIO 3D CAROUSEL ============ -->
+    <section class="studio" id="studio" data-nav="light">
+      <div class="container studio__head">
+        <p class="eyebrow">The studio</p>
+        <h2 class="section-title reveal-title">Step inside <em>the calm.</em></h2>
+        <p class="studio__hint">Drag to explore &larr; &rarr;</p>
+      </div>
+      <div class="carousel" id="carousel" data-cursor="Drag">
+        <div class="carousel__ring" id="ring"></div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY ============ -->
+    <section class="journey" id="journey" data-nav="light">
+      <div class="container">
+        <p class="eyebrow">Your visit</p>
+        <h2 class="section-title reveal-title">Four steps to your<br /><em>best skin yet.</em></h2>
+        <div class="journey__steps">
+          <svg class="journey__line" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+            <path id="journeyPath" d="M0 60 C 150 0, 300 120, 450 60 S 750 0, 900 60 S 1100 110, 1200 60" />
+          </svg>
+          <div class="step"><span class="step__n">01</span><h3>Consult</h3><p>A relaxed conversation about your routine, lifestyle and goals.</p></div>
+          <div class="step"><span class="step__n">02</span><h3>Analyse</h3><p>Magnified skin mapping to see what's happening beneath the surface.</p></div>
+          <div class="step"><span class="step__n">03</span><h3>Treat</h3><p>A protocol built for you, adjusted in real time as your skin responds.</p></div>
+          <div class="step"><span class="step__n">04</span><h3>Glow</h3><p>Take-home plan and follow-up check-ins so results keep building.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <!-- NOTE: sample testimonials for the demo. Replace with the clinic's real reviews before going live. -->
+    <section class="reviews" data-nav="light">
+      <div class="container">
+        <div class="reviews__stars">★★★★★</div>
+        <div class="reviews__slider" id="reviews">
+          <blockquote class="review is-active">
+            <p>"I've tried every facial in this city. Luméa is the first place that actually explained my skin to me. Three sessions in, my texture is gone."</p>
+            <cite>Sample review &middot; Client A</cite>
+          </blockquote>
+          <blockquote class="review">
+            <p>"The room, the lighting, the quiet. It feels like a retreat, but the results are completely clinical. The LED plus HydraFacial combo is unreal."</p>
+            <cite>Sample review &middot; Client B</cite>
+          </blockquote>
+          <blockquote class="review">
+            <p>"No upselling, no pressure. Just honest advice and the best glow I've had before my wedding."</p>
+            <cite>Sample review &middot; Client C</cite>
+          </blockquote>
+        </div>
+        <div class="reviews__dots" id="reviewDots"><button class="is-active" aria-label="Review 1"></button><button aria-label="Review 2"></button><button aria-label="Review 3"></button></div>
+      </div>
+    </section>
+
+    <!-- ============ MEMBERSHIP ============ -->
+    <section class="membership" id="membership" data-nav="light">
+      <div class="container">
+        <p class="eyebrow">Membership</p>
+        <h2 class="section-title reveal-title">Consistency is the<br /><em>real secret.</em></h2>
+        <div class="plans">
+          <div class="plan tilt">
+            <h3>Glow</h3>
+            <div class="plan__price"><span>$</span>149<small>/mo</small></div>
+            <ul><li>1 signature facial monthly</li><li>10% off retail skincare</li><li>Priority booking</li></ul>
+            <a href="#book" class="btn btn--outline">Choose Glow</a>
+            <div class="tilt__shine"></div>
+          </div>
+          <div class="plan plan--featured tilt">
+            <span class="plan__tag">Most loved</span>
+            <h3>Radiance</h3>
+            <div class="plan__price"><span>$</span>249<small>/mo</small></div>
+            <ul><li>1 HydraFacial + 1 LED session</li><li>15% off retail skincare</li><li>Free add-on each visit</li><li>Rollover unused credits</li></ul>
+            <a href="#book" class="btn btn--light">Choose Radiance</a>
+            <div class="tilt__shine"></div>
+          </div>
+          <div class="plan tilt">
+            <h3>Lumière</h3>
+            <div class="plan__price"><span>$</span>399<small>/mo</small></div>
+            <ul><li>Any 2 treatments monthly</li><li>20% off retail skincare</li><li>Quarterly skin analysis</li><li>Guest pass every season</li></ul>
+            <a href="#book" class="btn btn--outline">Choose Lumière</a>
+            <div class="tilt__shine"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOK ============ -->
+    <section class="book" id="book">
+      <div class="book__halo"></div>
+      <div class="container book__grid">
+        <div class="book__text">
+          <p class="eyebrow eyebrow--light">Reserve your visit</p>
+          <h2 class="section-title section-title--light reveal-title">Your skin,<br /><em>in good hands.</em></h2>
+          <p class="book__sub">Tell us a little about you and our concierge will confirm within two hours during opening times.</p>
+          <ul class="book__info">
+            <li><span>Visit</span>8420 Melrose Place, Los Angeles, CA</li>
+            <li><span>Hours</span>Tue to Sat &middot; 9am to 7pm</li>
+            <li><span>Call</span>(310) 555-0142</li>
+          </ul>
+        </div>
+        <form class="book__form" id="bookForm" novalidate>
+          <div class="field"><input id="f-name" type="text" required placeholder=" " /><label for="f-name">Full name</label></div>
+          <div class="field"><input id="f-email" type="email" required placeholder=" " /><label for="f-email">Email</label></div>
+          <div class="field field--row">
+            <div class="field"><select id="f-treat" required>
+              <option value="" disabled selected hidden></option>
+              <option>HydraFacial Signature</option><option>LED Light Therapy</option><option>Microcurrent Lift</option><option>Oxygen Infusion Facial</option><option>The Arch Ritual</option><option>Complimentary skin analysis</option>
+            </select><label for="f-treat">Treatment</label></div>
+            <div class="field"><input id="f-date" type="date" required placeholder=" " /><label for="f-date" class="is-up">Preferred date</label></div>
+          </div>
+          <button type="submit" class="btn btn--light btn--block magnetic">Request appointment <i class="arrow"></i></button>
+          <p class="book__note">Demo form: no data is sent anywhere.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__big">Luméa</div>
+      <div class="footer__row">
+        <p>&copy; 2026 Luméa Skin Studio. All rights reserved.</p>
+        <nav><a href="#treatments">Treatments</a><a href="#membership">Membership</a><a href="#book">Contact</a><a href="#top">Back to top &uarr;</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    } }
+  </script>
+  <script src="js/scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Menu | Velvet Bean Coffee &amp; Chocolate Bar</title>
+  <meta name="description" content="The Velvet Bean menu: espresso, cold brew, matcha, bean-to-bar chocolate drinks and desserts." />
+  <meta name="theme-color" content="#0f0906" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f0906'/%3E%3Cpath d='M32 10c-10 0-16 10-16 22s6 22 16 22 16-10 16-22-6-22-16-22zM32 11c-5 8 5 13 0 21s5 14 0 21' fill='none' stroke='%23e2b77a' stroke-width='3'/%3E%3C/svg%3E" />
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/" } }</script>
+</head>
+<body data-page="menu">
+  <div class="curtain is-active" aria-hidden="true">
+    <svg class="curtain__mark" viewBox="0 0 64 64"><path d="M32 6c-12 0-20 12-20 26s8 26 20 26 20-12 20-26S44 6 32 6z" /><path d="M32 7c-6 9 6 16 0 25s6 17 0 25" /></svg>
+    <div class="curtain__word">Velvet <em>Bean</em></div>
+    <div class="curtain__label">Pulling your first shot</div>
+    <div class="curtain__count">0</div>
+  </div>
+
+  <main>
+    <section class="hero hero--inner">
+      <canvas class="webgl" data-scene="beans" aria-label="3D coffee beans falling and parting around the cursor"></canvas>
+      <div class="hero__fade"></div>
+      <div class="container hero__content">
+        <nav class="crumbs" data-hero><a href="index.html">Home</a><span>/</span><b>Menu</b></nav>
+        <p class="eyebrow" data-hero>Espresso · Cold · Cacao · Pastry</p>
+        <h1 class="display" data-split>The <em>menu.</em></h1>
+        <p class="lead hero__lead" data-hero>Everything is made in-house: roasted in Brooklyn, tempered behind the bar, baked before sunrise. Move your cursor through the beans.</p>
+      </div>
+      <div class="hero__scroll"><i></i>Scroll</div>
+    </section>
+
+    <div class="menu-bar">
+      <div class="container menu-bar__inner">
+        <div class="tabs" id="tabs" role="tablist">
+          <button class="is-on" data-cat="all">All</button><button data-cat="espresso">Espresso Bar</button><button data-cat="cold">Cold &amp; Iced</button><button data-cat="cacao">Chocolate Bar</button><button data-cat="dessert">Desserts</button>
+          <span class="tabs__pill" id="tabPill"></span>
+        </div>
+        <div class="diet"><label><input type="checkbox" id="fVegan" /> Vegan option</label><label><input type="checkbox" id="fGf" /> Gluten-free</label></div>
+      </div>
+    </div>
+
+    <section class="section section--tight">
+      <div class="container"><div class="mgrid" id="mgrid"></div></div>
+    </section>
+
+    <section class="section on-roast" id="builder">
+      <div class="container builder">
+        <div class="cupviz" id="cupviz" aria-hidden="true">
+          <div class="cupviz__steam"><i></i><i></i><i></i></div>
+          <div class="cupviz__glass" id="glass">
+            <div class="layer" id="lBase"></div><div class="layer" id="lMilk"></div><div class="layer" id="lSyrup"></div><div class="layer layer--foam" id="lFoam"></div>
+            <span class="ice" style="left:22px;top:90px;transform:rotate(12deg)"></span><span class="ice" style="left:110px;top:130px;transform:rotate(-18deg)"></span><span class="ice" style="left:60px;top:190px;transform:rotate(30deg)"></span>
+          </div>
+          <div class="cupviz__label" id="cupName">Your drink</div>
+        </div>
+        <div>
+          <p class="eyebrow">Build your own</p>
+          <h2 class="h2" data-split>Make it <em>yours.</em></h2>
+          <p class="lead" style="margin:1.2rem 0 2rem" data-reveal>Pick a base, milk and a finishing touch. Watch it pour, then order ahead for pickup.</p>
+          <form class="opts" id="opts">
+            <div class="opt"><h4>Base</h4><div class="chips">
+              <label><input type="radio" name="base" value="espresso" checked /><span>Double espresso <small>$4.5</small></span></label>
+              <label><input type="radio" name="base" value="coldbrew" /><span>Cold brew <small>$5</small></span></label>
+              <label><input type="radio" name="base" value="matcha" /><span>Ceremonial matcha <small>$5.5</small></span></label>
+              <label><input type="radio" name="base" value="cacao" /><span>72% hot cacao <small>$5.5</small></span></label></div></div>
+            <div class="opt"><h4>Milk</h4><div class="chips">
+              <label><input type="radio" name="milk" value="whole" checked /><span>Whole</span></label>
+              <label><input type="radio" name="milk" value="oat" /><span>Oat <small>+.75</small></span></label>
+              <label><input type="radio" name="milk" value="almond" /><span>Almond <small>+.75</small></span></label>
+              <label><input type="radio" name="milk" value="none" /><span>No milk</span></label></div></div>
+            <div class="opt"><h4>Finish</h4><div class="chips">
+              <label><input type="radio" name="syrup" value="none" checked /><span>Nothing</span></label>
+              <label><input type="radio" name="syrup" value="caramel" /><span>Burnt caramel <small>+1</small></span></label>
+              <label><input type="radio" name="syrup" value="vanilla" /><span>Tahitian vanilla <small>+1</small></span></label>
+              <label><input type="radio" name="syrup" value="choc" /><span>Chocolate ganache <small>+1.5</small></span></label></div></div>
+            <div class="opt"><h4>Style &amp; size</h4><div class="chips">
+              <label><input type="radio" name="temp" value="hot" checked /><span>Hot</span></label>
+              <label><input type="radio" name="temp" value="iced" /><span>Iced</span></label>
+              <label><input type="radio" name="size" value="8" checked /><span>8 oz</span></label>
+              <label><input type="radio" name="size" value="12" /><span>12 oz <small>+.5</small></span></label>
+              <label><input type="radio" name="size" value="16" /><span>16 oz <small>+1</small></span></label></div></div>
+            <div class="total"><div><small>Your drink</small><b id="price">$4.50</b></div><button class="btn btn--caramel magnetic" type="submit">Order ahead <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-footer></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

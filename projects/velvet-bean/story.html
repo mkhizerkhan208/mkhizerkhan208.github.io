@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Our Story | Velvet Bean Coffee &amp; Chocolate Bar</title>
+  <meta name="description" content="The story of Velvet Bean, a Brooklyn coffee and chocolate bar since 2019." />
+  <meta name="theme-color" content="#0f0906" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f0906'/%3E%3Cpath d='M32 10c-10 0-16 10-16 22s6 22 16 22 16-10 16-22-6-22-16-22zM32 11c-5 8 5 13 0 21s5 14 0 21' fill='none' stroke='%23e2b77a' stroke-width='3'/%3E%3C/svg%3E" />
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/" } }</script>
+</head>
+<body data-page="story">
+  <div class="curtain is-active" aria-hidden="true">
+    <svg class="curtain__mark" viewBox="0 0 64 64"><path d="M32 6c-12 0-20 12-20 26s8 26 20 26 20-12 20-26S44 6 32 6z" /><path d="M32 7c-6 9 6 16 0 25s6 17 0 25" /></svg>
+    <div class="curtain__word">Velvet <em>Bean</em></div>
+    <div class="curtain__label">Pulling your first shot</div>
+    <div class="curtain__count">0</div>
+  </div>
+
+  <main>
+    <section class="hero hero--inner">
+      <canvas class="webgl" data-scene="bonbons" aria-label="3D chocolate truffles tumbling in a spiral"></canvas>
+      <div class="hero__fade"></div>
+      <div class="container hero__content">
+        <nav class="crumbs" data-hero><a href="index.html">Home</a><span>/</span><b>Our Story</b></nav>
+        <p class="eyebrow" data-hero>Since 2019</p>
+        <h1 class="display" data-split>Born from<br /><em>a bar of 70%.</em></h1>
+        <p class="lead hero__lead" data-hero>Two friends, one late night and a very good chocolate bar. Six years later, Velvet Bean is where Williamsburg comes to slow down.</p>
+      </div>
+      <div class="hero__scroll"><i></i>Scroll</div>
+    </section>
+
+    <section class="section">
+      <div class="container intro">
+        <div class="intro__media"><div class="media media--parallax" data-reveal="clip" data-parallax style="position:absolute;inset:0"><img src="assets/img/storefront.jpg" alt="Velvet Bean storefront at dusk" /></div></div>
+        <div>
+          <p class="eyebrow">Who we are</p>
+          <p class="scrub" data-scrub>We believe coffee and chocolate are the same story: a seed, a farmer, a fire and a lot of patience. We just tell it slowly, one cup at a time.</p>
+          <div class="intro__list">
+            <div data-reveal><b data-count="1.2" data-dec="1" data-suf="M">0</b><span>Cups poured</span></div>
+            <div data-reveal style="--d:120ms"><b data-count="38">0</b><span>People on the team</span></div>
+            <div data-reveal style="--d:240ms"><b data-count="9">0</b><span>Partner farms</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section on-roast">
+      <div class="container">
+        <div class="sec-head"><div><p class="eyebrow">Timeline</p><h2 class="h2" data-split>Six years,<br /><em>one obsession.</em></h2></div></div>
+        <div class="tl" id="tl">
+          <div class="tl__line"><i></i></div>
+          <div class="tl__item"><div class="tl__text" data-reveal><div class="tl__year">2019</div><h3>A cart on Bedford Ave</h3><p>Maya and Theo start selling espresso and homemade truffles from a converted flower cart.</p></div><div class="media tl__img" data-reveal="clip"><img src="assets/img/latte-pour.jpg" alt="Latte art pour" /></div></div>
+          <div class="tl__item"><div class="tl__text" data-reveal><div class="tl__year">2021</div><h3>Our first roaster</h3><p>A 15kg drum roaster moves into a Greenpoint garage. We start sourcing directly from farms.</p></div><div class="media tl__img" data-reveal="clip"><img src="assets/img/espresso-bar.jpg" alt="Espresso machine and grinder" /></div></div>
+          <div class="tl__item"><div class="tl__text" data-reveal><div class="tl__year">2023</div><h3>The bar on Wythe</h3><p>We open the flagship: velvet chairs, a glass chocolate kitchen and a bar that stays open late.</p></div><div class="media tl__img" data-reveal="clip"><img src="assets/img/interior.jpg" alt="Velvet Bean interior" /></div></div>
+          <div class="tl__item"><div class="tl__text" data-reveal><div class="tl__year">2026</div><h3>The atelier</h3><p>Bean-to-bar chocolate goes fully in-house, from cacao pod to the truffle on your saucer.</p></div><div class="media tl__img" data-reveal="clip"><img src="assets/img/bar-pour.jpg" alt="Chocolate poured over a bar" /></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="sec-head"><div><p class="eyebrow">What we stand for</p><h2 class="h2" data-split>Three <em>promises.</em></h2></div></div>
+        <div class="values" data-reveal>
+          <div class="value"><svg viewBox="0 0 24 24"><path d="M12 21c-5-3-8-7-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 4-3 8-8 11z" /></svg><h4>Paid fairly</h4><p>We pay farmers an average of 2.4x the commodity price and publish every contract.</p></div>
+          <div class="value"><svg viewBox="0 0 24 24"><path d="M4 20c8 0 14-6 16-16C10 6 4 12 4 20zM4 20l7-7" /></svg><h4>Low waste</h4><p>Compostable cups, grounds to local gardens and cacao husks brewed into tea.</p></div>
+          <div class="value"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" /></svg><h4>Good jobs</h4><p>Living wages, health cover and paid barista training for every member of the team.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section on-cream">
+      <div class="container">
+        <div class="sec-head"><div><p class="eyebrow">The people</p><h2 class="h2" data-split>Meet the <em>makers.</em></h2></div></div>
+        <div class="team">
+          <div class="person" data-tilt data-reveal><div class="person__mono" style="--h:28"><span>MA</span></div><div><small>Co-founder · Chocolatier</small><h4>Maya Alvarez</h4><p>Trained in Lyon, obsessed with Ecuadorian cacao.</p></div></div>
+          <div class="person" data-tilt data-reveal style="--d:100ms"><div class="person__mono" style="--h:18"><span>TR</span></div><div><small>Co-founder · Roaster</small><h4>Theo Reyes</h4><p>Roasts every batch himself, twice a week.</p></div></div>
+          <div class="person" data-tilt data-reveal style="--d:200ms"><div class="person__mono" style="--h:38"><span>JK</span></div><div><small>Head barista</small><h4>June Kim</h4><p>Two-time regional latte art champion.</p></div></div>
+          <div class="person" data-tilt data-reveal style="--d:300ms"><div class="person__mono" style="--h:10"><span>SO</span></div><div><small>Pastry chef</small><h4>Sam Okafor</h4><p>The brownie. You know the one.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="sec-head"><div><p class="eyebrow">Gallery</p><h2 class="h2" data-split>Life at <em>the bar.</em></h2></div><p class="lead" data-reveal>Tap any photo to open it full screen.</p></div>
+        <div class="masonry" id="gallery"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-footer></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Brieflane · Case study | Muhammad Khizr Khan</title>
+  <meta name="description" content="Case study: Brieflane, a white-label client portal for agencies built with Next.js, Drizzle, Better Auth, Stripe and Claude." />
+  <meta name="theme-color" content="#08080a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d4ff3f'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle'%3EKK%3C/text%3E%3C/svg%3E" />
+</head>
+<body data-page="case" data-root="../">
+  <div class="grain"></div>
+  <main>
+    <section class="cs-hero">
+      <div class="container">
+        <nav class="crumbs" data-hero><a href="../index.html">Home</a><span>/</span><a href="../index.html#work">Work</a><span>/</span><span>Brieflane</span></nav>
+        <p class="label" data-hero>Case study · SaaS · Full-stack</p>
+        <h1 class="h1" data-split>One link for<br /><em>every approval.</em></h1>
+        <p class="lead" style="margin-top:1.6rem" data-hero>Brieflane is a white-label client portal for design and development agencies. Clients review work, approve or request changes, and pay invoices in one place. The agency receives that feedback as prioritised tasks instead of a long email thread.</p>
+        <div class="cs-meta" data-hero>
+          <div><small>Role</small>Solo: product, design, full-stack</div>
+          <div><small>Year</small>2026</div>
+          <div><small>Type</small>Multi-tenant SaaS web app</div>
+          <div><small>Status</small>Built &amp; tested · deploy pending</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+      <div class="container">
+        <div class="cs-shot" data-reveal><img src="../assets/img/brieflane-landing.jpg" alt="Brieflane landing page" /></div>
+
+        <div class="cs-text">
+          <h2 data-reveal>The problem</h2>
+          <div data-reveal><p>Agencies lose hours every week to scattered approvals: Figma links in email, “final_v3” PDFs, and payment reminders sent by hand. Nobody can say for sure who approved what, or when.</p><p>Brieflane gives each client one link where the work waits for them, and gives the agency an audit trail of every decision.</p></div>
+        </div>
+
+        <div class="cs-two" data-reveal>
+          <div class="cs-shot"><img src="../assets/img/brieflane-project-agency-view.jpg" alt="Project page, agency view, with AI-generated tasks" /></div>
+          <div class="cs-shot"><img src="../assets/img/brieflane-project-client-view.jpg" alt="Same project, client view, with approve and request-changes controls" /></div>
+        </div>
+
+        <div class="cs-text">
+          <h2 data-reveal>What it does</h2>
+          <div class="mods">
+            <div class="mod" data-reveal><h4>Projects &amp; deliverables</h4><ul><li>Stage tracker, milestones and budget per project</li><li>Share designs, staging links and documents</li><li>Approve or request changes, with every version recorded</li></ul></div>
+            <div class="mod" data-reveal style="--d:80ms"><h4>AI where it saves time</h4><ul><li>One click turns a rambling client comment into prioritised tasks (Claude)</li><li>AI-drafted weekly client update from real project activity</li><li>Offline fallback parser, so it works with no API key</li></ul></div>
+            <div class="mod" data-reveal><h4>Invoices &amp; payments</h4><ul><li>Line items, drafts, sending and overdue tracking</li><li>Clients pay through Stripe Checkout</li><li>Clearly labelled demo payments without Stripe keys</li></ul></div>
+            <div class="mod" data-reveal style="--d:80ms"><h4>White-label</h4><ul><li>The agency’s brand colour runs through the whole portal</li><li>Clients see the agency, never Brieflane</li><li>Clients never see internal tasks or activity</li></ul></div>
+          </div>
+        </div>
+
+        <div class="cs-text">
+          <h2 data-reveal>Engineering decisions</h2>
+          <ul class="decisions">
+            <li data-reveal><b>Authorisation lives in the data layer, not in pages.</b> Every query takes the viewer and scopes itself, so a client who guesses another client’s project ID simply gets nothing back.</li>
+            <li data-reveal><b>No approving on someone else’s behalf.</b> Clients can’t act for the agency and staff can’t act for the client. Double submissions are blocked with a conditional update on the previous status.</li>
+            <li data-reveal><b>Money is integer cents end to end.</b> Totals are computed in SQL from line items, never stored.</li>
+            <li data-reveal><b>Idempotent Stripe webhooks.</b> Marking an invoice paid only flips “sent → paid”, so retried webhooks are harmless.</li>
+            <li data-reveal><b>Accessible by default.</b> Semantic landmarks, visible focus, reduced-motion support and outlines that survive Windows High Contrast mode.</li>
+          </ul>
+        </div>
+
+        <div class="cs-text">
+          <h2 data-reveal>Architecture</h2>
+          <div data-reveal>
+<div class="arch">src/
+├── app/            routes (App Router): pages only render
+│   ├── actions/    Server Actions: validate with Zod → mutate → revalidate
+│   └── api/        Better Auth handler · Stripe webhook
+├── server/
+│   ├── viewer.ts   session → { role, agency, client } per request
+│   ├── data.ts     read side: every query scoped by viewer
+│   └── mutations.ts  load → authorise → write (transactions)
+├── lib/            permissions (unit tested) · ai.ts · payments.ts
+└── db/             Drizzle schema · libSQL client · demo seed</div>
+            <p style="margin-top:1.4rem">Tested with Vitest: pure permission rules and state transitions as unit tests, plus access tests that prove one client can never read another client’s data.</p>
+          </div>
+        </div>
+
+        <div class="cs-two" data-reveal>
+          <div class="cs-shot"><img src="../assets/img/brieflane-agency-dashboard.jpg" alt="Agency dashboard" /></div>
+          <div class="cs-shot" style="max-height:900px;overflow:hidden"><img src="../assets/img/brieflane-client-mobile.jpg" alt="Client view on a phone" /></div>
+        </div>
+
+        <div class="cs-text">
+          <h2 data-reveal>Stack</h2>
+          <div class="stack" data-reveal><span>Next.js 16 (App Router)</span><span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>Drizzle ORM</span><span>libSQL / Turso</span><span>Better Auth</span><span>Stripe Checkout + webhooks</span><span>Vercel AI SDK</span><span>Claude API</span><span>Zod</span><span>Vitest</span><span>ESLint</span></div>
+        </div>
+
+        <a href="axelink.html" class="next" data-reveal><div><p class="label" style="margin:0 0 .4rem">Next case study</p><b>Axelink Web Auditor</b></div><span class="btn btn--lime">Read <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" /></svg></span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container"><span>© 2026 Muhammad Khizr Khan · Axelink Systems LLC</span><nav><a href="../index.html#work">All work</a><a href="../index.html#contact">Contact</a></nav></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="../js/profile.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

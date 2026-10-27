@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golden Hour Café & Rooftop | Brunch by Day, Rooftop by Night</title>
+  <meta name="description" content="Golden Hour Café & Rooftop: specialty coffee, all-day brunch and a sunset rooftop bar." />
+  <meta name="theme-color" content="#1a120d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='38' r='14' fill='%23f0a24a'/%3E%3Cpath d='M6 38h52' stroke='%23f0a24a' stroke-width='4'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader">
+    <div class="loader__cup">
+      <div class="loader__fill" id="loaderFill"></div>
+      <span class="loader__steam"></span><span class="loader__steam"></span><span class="loader__steam"></span>
+    </div>
+    <p class="loader__text">Brewing your experience <span id="loaderCount">0</span>%</p>
+  </div>
+
+  <div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span></span></div></div>
+  <div class="menu-float" id="menuFloat" aria-hidden="true"><img alt="" /></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Golden Hour home">
+      <svg viewBox="0 0 40 24" aria-hidden="true"><path d="M8 20a12 12 0 0 1 24 0" /><path d="M2 20h36" /><path d="M20 2v3M7 7l2 2M33 7l-2 2" /></svg>
+      <span>Golden&nbsp;Hour</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#menu">Menu</a>
+      <a href="#daynight">Rooftop</a>
+      <a href="#spaces">Spaces</a>
+      <a href="#events">Events</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a href="#reserve" class="btn btn--gold nav__cta magnetic">Reserve a table</a>
+    <button class="nav__burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+  <div class="mmenu" id="mmenu">
+    <a href="#menu">Menu</a><a href="#daynight">Rooftop</a><a href="#spaces">Spaces</a><a href="#events">Events</a><a href="#reserve">Reserve</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <canvas id="webgl" aria-hidden="true"></canvas>
+      <div class="hero__shade"></div>
+      <div class="hero__frame" aria-hidden="true"></div>
+      <div class="hero__content">
+        <div class="hero__brand">
+          <svg class="hero__mark" viewBox="0 0 64 60" aria-hidden="true">
+            <path d="M26 4c-4 4 4 7 0 12M34 2c-5 5 5 9 0 15" />
+            <path d="M8 24h40v6a20 20 0 0 1-40 0z" />
+            <path d="M48 28h4a6 6 0 0 1 0 12h-6" />
+            <path d="M4 56h52" />
+          </svg>
+          <span class="hero__word">GOLDEN HOUR</span>
+          <span class="hero__sub-word">Café &amp; Rooftop</span>
+        </div>
+        <p class="kicker hero__kicker"><span class="live"></span> Open today &middot; 7am to midnight</p>
+        <h1 class="hero__title">
+          <span class="line"><span class="line__inner">Brunch by day.</span></span>
+          <span class="line"><span class="line__inner"><em>Rooftop</em> by night.</span></span>
+        </h1>
+        <p class="hero__sub">Specialty coffee, slow brunches and sunset cocktails, all under one roof, and on top of it.</p>
+        <div class="hero__actions">
+          <a href="#reserve" class="btn btn--gold magnetic">Reserve a table <i class="arrow"></i></a>
+          <a href="#menu" class="btn btn--line magnetic">See the menu</a>
+        </div>
+      </div>
+      <div class="hero__badge" aria-hidden="true">
+        <svg viewBox="0 0 200 200"><defs><path id="c1" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0" /></defs>
+          <text><textPath href="#c1">FRESHLY ROASTED &#8226; ROOFTOP VIEWS &#8226; EST. 2019 &#8226;</textPath></text></svg>
+        <span>✺</span>
+      </div>
+      <div class="hero__scroll"><i></i><span>Scroll to pour</span></div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Specialty Coffee</span><b>✺</b><span>All-Day Brunch</span><b>✺</b><span>Rooftop Cocktails</span><b>✺</b><span>Fresh Bakery</span><b>✺</b><span>Live Jazz Fridays</span><b>✺</b>
+        <span>Specialty Coffee</span><b>✺</b><span>All-Day Brunch</span><b>✺</b><span>Rooftop Cocktails</span><b>✺</b><span>Fresh Bakery</span><b>✺</b><span>Live Jazz Fridays</span><b>✺</b>
+      </div>
+    </div>
+
+    <!-- ============ STORY ============ -->
+    <section class="story" data-nav="light">
+      <div class="container story__grid">
+        <div class="story__text">
+          <p class="kicker">Our story</p>
+          <h2 class="title reveal">A café that <em>changes</em><br />with the light.</h2>
+          <p class="story__p">Mornings smell like fresh sourdough and our house espresso. By afternoon the loft fills with laptops and long lunches. And when the sun drops, we open the roof, light the lanterns and pour something golden.</p>
+          <div class="story__stats">
+            <div><strong data-count="18">0</strong><span>Single-origin beans a year</span></div>
+            <div><strong data-count="6" data-suffix="am">0</strong><span>Bakery ovens on</span></div>
+            <div><strong data-count="140">0</strong><span>Seats, loft to rooftop</span></div>
+          </div>
+        </div>
+        <div class="story__media">
+          <figure class="story__img story__img--a tilt"><img src="assets/img/loft-interior.jpg" alt="Two-level industrial café loft with long wooden tables and yellow chairs" /></figure>
+          <figure class="story__img story__img--b tilt"><img src="assets/img/coffee-bar.jpg" alt="Coffee bar with hanging plants and a glowing neon sign" /></figure>
+          <div class="story__stamp">Since<br /><b>2019</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SIGNATURES (stacking cards) ============ -->
+    <section class="signatures" id="signatures">
+      <div class="container">
+        <p class="kicker kicker--light">House favourites</p>
+        <h2 class="title title--light reveal">Plates people<br /><em>cross town</em> for.</h2>
+      </div>
+      <div class="stack container">
+        <article class="scard" style="--bg:#2b1d14">
+          <div class="scard__img"><img src="assets/img/garden-egg-plate.jpg" alt="Sunny-side egg with toasted sourdough, heirloom tomatoes, radish and greens" /></div>
+          <div class="scard__body">
+            <span class="scard__no">01 / Brunch</span>
+            <h3>The Garden Egg Plate</h3>
+            <p>Free-range sunny egg, charred sourdough, roasted heirloom tomatoes, shaved radish and peppery greens with black-sesame salt.</p>
+            <div class="scard__foot"><span class="price">$16</span><span class="tag">Vegetarian</span></div>
+          </div>
+        </article>
+        <article class="scard" style="--bg:#3a2415">
+          <div class="scard__img"><img src="assets/img/brunch-table.jpg" alt="Sunlit table with a full breakfast, eggs benedict, avocado toast, açaí bowl and latte" /></div>
+          <div class="scard__body">
+            <span class="scard__no">02 / Weekend</span>
+            <h3>The Rooftop Spread</h3>
+            <p>Two eggs your way, maple bacon, pork sausage, garlic mushrooms, beans, hash brown and toast. Made for sharing, rarely shared.</p>
+            <div class="scard__foot"><span class="price">$21</span><span class="tag">Best seller</span></div>
+          </div>
+        </article>
+        <article class="scard" style="--bg:#1f1a14">
+          <div class="scard__img"><img src="assets/img/panini-shake.jpg" alt="Grilled vegetable panini with seasoned fries and a cookies and cream shake" /></div>
+          <div class="scard__body">
+            <span class="scard__no">03 / All day</span>
+            <h3>Panini &amp; Shake Combo</h3>
+            <p>Pressed sourdough panini with roasted peppers, spinach and mozzarella, peri-peri fries and our thick cookies &amp; cream shake.</p>
+            <div class="scard__foot"><span class="price">$19</span><span class="tag">Combo</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ MENU ============ -->
+    <section class="menu" id="menu" data-nav="light">
+      <div class="container">
+        <div class="menu__head">
+          <div>
+            <p class="kicker">The menu</p>
+            <h2 class="title reveal">Something for<br /><em>every hour.</em></h2>
+          </div>
+          <div class="tabs" role="tablist" id="tabs">
+            <button class="is-active" data-tab="brunch" role="tab">Brunch</button>
+            <button data-tab="coffee" role="tab">Coffee &amp; Shakes</button>
+            <button data-tab="kitchen" role="tab">Kitchen</button>
+            <button data-tab="evening" role="tab">Evening</button>
+            <span class="tabs__pill" id="tabPill"></span>
+          </div>
+        </div>
+        <div class="menu__panels">
+          <ul class="mlist is-active" data-panel="brunch">
+            <li data-img="garden-egg-plate"><div><h4>Garden Egg Plate</h4><p>Sunny egg, sourdough, heirloom tomato, radish</p></div><i></i><span>$16</span></li>
+            <li data-img="brunch-table"><div><h4>The Rooftop Spread</h4><p>Eggs, bacon, sausage, mushrooms, beans, hash brown</p></div><i></i><span>$21</span></li>
+            <li data-img="brunch-table"><div><h4>Smashed Avo Toast</h4><p>Feta, chili threads, lime, pickled shallot</p></div><i></i><span>$15</span></li>
+            <li data-img="brunch-table"><div><h4>Benedict Two Ways</h4><p>Smoked salmon or ham, chipotle hollandaise</p></div><i></i><span>$18</span></li>
+            <li data-img="brunch-table"><div><h4>Tropical Açaí Bowl</h4><p>Strawberry, kiwi, coconut, house granola</p></div><i></i><span>$14</span></li>
+          </ul>
+          <ul class="mlist" data-panel="coffee">
+            <li data-img="coffee-bar"><div><h4>Honey Oat Latte</h4><p>Double shot, local wildflower honey, oat milk</p></div><i></i><span>$6.50</span></li>
+            <li data-img="coffee-bar"><div><h4>Flat White</h4><p>Our seasonal espresso blend, silky microfoam</p></div><i></i><span>$5.00</span></li>
+            <li data-img="coffee-bar"><div><h4>Cold Brew Tonic</h4><p>18-hour cold brew, tonic, orange peel</p></div><i></i><span>$6.00</span></li>
+            <li data-img="panini-shake"><div><h4>Cookies &amp; Cream Shake</h4><p>Whipped cream, chocolate drizzle, cookie crumb</p></div><i></i><span>$9.00</span></li>
+            <li data-img="panini-shake"><div><h4>Salted Caramel Frappé</h4><p>Espresso, caramel, sea salt, crunchy praline</p></div><i></i><span>$8.00</span></li>
+          </ul>
+          <ul class="mlist" data-panel="kitchen">
+            <li data-img="panini-shake"><div><h4>Grilled Veggie Panini</h4><p>Roasted peppers, spinach, mozzarella, pesto</p></div><i></i><span>$14</span></li>
+            <li data-img="panini-shake"><div><h4>Peri-Peri Fries</h4><p>Hand-cut, smoked paprika, garlic aioli</p></div><i></i><span>$7</span></li>
+            <li data-img="loft-interior"><div><h4>Sourdough Club</h4><p>Roast chicken, bacon, tomato, herb mayo</p></div><i></i><span>$16</span></li>
+            <li data-img="olive-tree-dining"><div><h4>Harvest Grain Bowl</h4><p>Farro, roast squash, feta, tahini dressing</p></div><i></i><span>$15</span></li>
+            <li data-img="loft-interior"><div><h4>Pastry of the Morning</h4><p>Ask the bakery. It changes every day.</p></div><i></i><span>$5</span></li>
+          </ul>
+          <ul class="mlist" data-panel="evening">
+            <li data-img="rooftop-sunset"><div><h4>Golden Hour Spritz</h4><p>Aperitivo, blood orange, prosecco, thyme</p></div><i></i><span>$14</span></li>
+            <li data-img="rooftop-night"><div><h4>Espresso Martini</h4><p>Vodka, house espresso, coffee liqueur</p></div><i></i><span>$15</span></li>
+            <li data-img="string-lights"><div><h4>Smoked Old Fashioned</h4><p>Bourbon, demerara, bitters, oak smoke</p></div><i></i><span>$16</span></li>
+            <li data-img="rooftop-night"><div><h4>Rooftop Mezze Board</h4><p>Hummus, whipped feta, olives, warm flatbread</p></div><i></i><span>$19</span></li>
+            <li data-img="lantern-lounge"><div><h4>Zero-Proof Garden Fizz</h4><p>Cucumber, elderflower, lime, soda</p></div><i></i><span>$9</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DAY TO NIGHT (pinned) ============ -->
+    <section class="daynight" id="daynight">
+      <div class="dn__pin">
+        <div class="dn__sky" id="dnSky"></div>
+        <div class="dn__left">
+          <p class="kicker kicker--light">The rooftop</p>
+          <h2 class="title title--light">One roof.<br /><em>Four moods.</em></h2>
+          <div class="dn__arc">
+            <svg viewBox="0 0 300 150" aria-hidden="true">
+              <path d="M10 140 A140 140 0 0 1 290 140" class="dn__arcbg" />
+              <path d="M10 140 A140 140 0 0 1 290 140" class="dn__arcfg" id="dnArc" />
+              <circle r="9" class="dn__sun" id="dnSun" cx="10" cy="140" />
+            </svg>
+            <div class="dn__clock" id="dnClock">11:00 AM</div>
+          </div>
+          <div class="dn__captions">
+            <div class="dn__cap is-active"><h3>Late brunch in the shade</h3><p>The bar opens at eleven with cold brew, spritzes and the best seat in the city.</p></div>
+            <div class="dn__cap"><h3>Golden hour</h3><p>Sun on the skyline, lanterns on the tables. The reason we're named what we are.</p></div>
+            <div class="dn__cap"><h3>The lights come on</h3><p>Edison bulbs flicker across the deck and the DJ eases into the evening.</p></div>
+            <div class="dn__cap"><h3>The city after dark</h3><p>Candlelit dinners, espresso martinis and the skyline shining back at you.</p></div>
+          </div>
+        </div>
+        <div class="dn__frames">
+          <figure class="dn__frame"><img src="assets/img/rooftop-bar-day.jpg" alt="Rooftop bar with terracotta tiles and a green pergola in daylight" /></figure>
+          <figure class="dn__frame"><img src="assets/img/rooftop-sunset.jpg" alt="Guests on the rooftop lounge at sunset over the city" /></figure>
+          <figure class="dn__frame"><img src="assets/img/string-lights.jpg" alt="Rooftop deck with glowing Edison string lights at dusk" /></figure>
+          <figure class="dn__frame"><img src="assets/img/rooftop-night.jpg" alt="Candlelit rooftop dining terrace with the city skyline at night" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SPACES (3D gallery) ============ -->
+    <section class="spaces" id="spaces" data-nav="light">
+      <div class="container spaces__head">
+        <p class="kicker">Spaces</p>
+        <h2 class="title reveal">Find <em>your</em> corner.</h2>
+        <p class="spaces__sub">Five rooms, three floors, one rooftop. Work, date, celebrate or just sit with a good cup.</p>
+      </div>
+      <div class="gallery" id="gallery">
+        <div class="gallery__plane" id="galleryPlane">
+          <div class="gcol" data-speed="-60">
+            <figure class="gitem"><img src="assets/img/loft-interior.jpg" alt="The Loft" /><figcaption>The Loft</figcaption></figure>
+            <figure class="gitem"><img src="assets/img/terrace-lights.jpg" alt="The Terrace Garden" /><figcaption>Terrace Garden</figcaption></figure>
+          </div>
+          <div class="gcol" data-speed="40">
+            <figure class="gitem"><img src="assets/img/olive-tree-dining.jpg" alt="The Olive Tree Room under a glass roof" /><figcaption>The Olive Tree Room</figcaption></figure>
+            <figure class="gitem"><img src="assets/img/rooftop-bar-day.jpg" alt="The Rooftop Bar" /><figcaption>Rooftop Bar</figcaption></figure>
+          </div>
+          <div class="gcol" data-speed="-30">
+            <figure class="gitem"><img src="assets/img/lantern-lounge.jpg" alt="The Lantern Lounge with rattan pendant lights" /><figcaption>Lantern Lounge</figcaption></figure>
+            <figure class="gitem"><img src="assets/img/coffee-bar.jpg" alt="The Coffee Bar" /><figcaption>Coffee Bar</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTS ============ -->
+    <section class="events" id="events">
+      <div class="container">
+        <p class="kicker kicker--light">This week</p>
+        <h2 class="title title--light reveal">Come for coffee.<br /><em>Stay for the night.</em></h2>
+        <div class="ecards">
+          <article class="ecard tilt">
+            <div class="ecard__day"><b>FRI</b><span>8 PM</span></div>
+            <h3>Live Jazz on the Roof</h3>
+            <p>A local trio, candlelight and a cocktail list built for slow songs.</p>
+            <span class="ecard__tag">Free entry</span>
+          </article>
+          <article class="ecard tilt">
+            <div class="ecard__day"><b>SAT</b><span>6 PM</span></div>
+            <h3>Sunset Sessions</h3>
+            <p>Deep house as the sun goes down. Golden Hour Spritz two-for-one until 7.</p>
+            <span class="ecard__tag">Happy hour</span>
+          </article>
+          <article class="ecard tilt">
+            <div class="ecard__day"><b>SUN</b><span>10 AM</span></div>
+            <h3>Slow Sunday Brunch</h3>
+            <p>Bottomless coffee, a pastry board for the table and no rush to leave.</p>
+            <span class="ecard__tag">Book ahead</span>
+          </article>
+        </div>
+        <div class="private">
+          <div>
+            <h3>Planning something bigger?</h3>
+            <p>Birthdays, launches, rehearsal dinners. Hire the rooftop or the loft for up to 140 guests.</p>
+          </div>
+          <a href="#reserve" class="btn btn--amber magnetic">Enquire about events <i class="arrow"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <!-- NOTE: sample reviews for the demo. Replace with the café's real reviews before going live. -->
+    <section class="reviews" data-nav="light">
+      <div class="container"><p class="kicker">Kind words</p><h2 class="title reveal">Regulars, <em>in their words.</em></h2></div>
+      <div class="rrow">
+        <div class="rtrack">
+          <blockquote><p>"The honey oat latte ruined every other latte for me."</p><cite>Sample review</cite></blockquote>
+          <blockquote><p>"Came for brunch, stayed for sunset. Best rooftop view in town."</p><cite>Sample review</cite></blockquote>
+          <blockquote><p>"The loft is my office three days a week. Fast wifi, great staff."</p><cite>Sample review</cite></blockquote>
+          <blockquote><p>"Jazz Friday on the roof is the best date night we've had."</p><cite>Sample review</cite></blockquote>
+          <blockquote><p>"That garden egg plate is basically art. Tastes even better."</p><cite>Sample review</cite></blockquote>
+        </div>
+      </div>
+      <div class="rrow rrow--rev">
+        <div class="rtrack">
+          <blockquote><p>"Espresso martinis under string lights. Enough said."</p><cite>Sample review</cite></blockquote>
+          <blockquote><p>"Hosted my birthday on the rooftop. The team made it effortless."</p><cite>Sample review</cite></blockquote>
+          <blockquote><p>"The sourdough comes out warm at 7am. Worth the early alarm."</p><cite>Sample review</cite></blockquote>
+          <blockquote><p>"Beautiful space, dog friendly patio, and the fries are addictive."</p><cite>Sample review</cite></blockquote>
+          <blockquote><p>"Every corner is photogenic, but the coffee is the real star."</p><cite>Sample review</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESERVE ============ -->
+    <section class="reserve" id="reserve">
+      <div class="reserve__glow"></div>
+      <div class="container reserve__grid" id="visit">
+        <div class="reserve__info">
+          <p class="kicker kicker--light">Reservations</p>
+          <h2 class="title title--light reveal">Save me<br /><em>a seat.</em></h2>
+          <p class="reserve__sub">Walk-ins are always welcome downstairs. For the rooftop after 5pm, we recommend booking.</p>
+          <div class="hours">
+            <div><span>Mon to Thu</span><b>7am to 11pm</b></div>
+            <div><span>Fri &amp; Sat</span><b>7am to 1am</b></div>
+            <div><span>Sunday</span><b>8am to 10pm</b></div>
+            <div><span>Find us</span><b>214 Congress Ave, Austin, TX</b></div>
+          </div>
+        </div>
+        <form class="rform" id="rform" novalidate>
+          <h3>Book a table</h3>
+          <div class="seat" role="radiogroup" aria-label="Seating area">
+            <label><input type="radio" name="area" value="Indoor loft" checked /><span>Indoor loft</span></label>
+            <label><input type="radio" name="area" value="Rooftop" /><span>Rooftop</span></label>
+          </div>
+          <div class="frow">
+            <label class="f"><span>Date</span><input type="date" id="rDate" required /></label>
+            <label class="f"><span>Time</span><select id="rTime" required>
+              <option>8:00 AM</option><option>10:00 AM</option><option selected>12:30 PM</option><option>3:00 PM</option><option>6:00 PM</option><option>7:30 PM</option><option>9:00 PM</option>
+            </select></label>
+            <label class="f"><span>Guests</span><select id="rGuests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option></select></label>
+          </div>
+          <label class="f"><span>Name</span><input type="text" id="rName" required placeholder="Your full name" /></label>
+          <label class="f"><span>Email</span><input type="email" id="rEmail" required placeholder="you@email.com" /></label>
+          <button class="btn btn--amber btn--block magnetic" type="submit">Confirm reservation <i class="arrow"></i></button>
+          <p class="rform__note">Demo form: no data is sent anywhere.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__sun"></div>
+    <div class="container">
+      <div class="footer__big">Golden Hour</div>
+      <div class="footer__row">
+        <p>&copy; 2026 Golden Hour Café &amp; Rooftop</p>
+        <nav><a href="#menu">Menu</a><a href="#events">Events</a><a href="#reserve">Reserve</a><a href="#top">Back to top &uarr;</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    } }
+  </script>
+  <!-- classic script (not type=module) so it also runs when opened by double-click -->
+  <script src="js/hero-photo.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

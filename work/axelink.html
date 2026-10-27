@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Axelink Web Auditor · Case study | Muhammad Khizr Khan</title>
+  <meta name="description" content="Case study: a 36-module passive website-audit and lead-intelligence engine built with Python, FastAPI, Playwright and Next.js." />
+  <meta name="theme-color" content="#08080a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d4ff3f'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle'%3EKK%3C/text%3E%3C/svg%3E" />
+</head>
+<body data-page="case" data-root="../">
+  <div class="grain"></div>
+  <main>
+    <section class="cs-hero">
+      <div class="container">
+        <nav class="crumbs" data-hero><a href="../index.html">Home</a><span>/</span><a href="../index.html#work">Work</a><span>/</span><span>Axelink Web Auditor</span></nav>
+        <p class="label" data-hero>Case study · Software · Private internal tool</p>
+        <h1 class="h1" data-split>An X-ray for<br /><em>any website.</em></h1>
+        <p class="lead" style="margin-top:1.6rem" data-hero>I built Axelink Web Auditor to find US small businesses whose websites are costing them customers, and to explain why in plain language. It audits a site using only what the site publicly serves, scores it, and turns the findings into a call brief and a branded PDF report.</p>
+        <div class="cs-meta" data-hero>
+          <div><small>Role</small>Solo: design, backend, frontend</div>
+          <div><small>Year</small>2026</div>
+          <div><small>Type</small>Internal sales &amp; audit engine</div>
+          <div><small>Status</small>In daily use · not public</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+      <div class="container">
+        <div class="feature__media" style="min-height:460px" data-reveal>
+          <div class="console" aria-label="Overview of the auditor's analysis modules">
+            <div class="console__bar"><i></i><i></i><i></i><span>axelink-auditor · scanning example-business.com</span></div>
+            <div class="console__grid" id="consoleGrid"></div>
+            <div class="console__score"><div><small>Health</small><strong data-cs="72">0</strong></div><div><small>Security</small><strong data-cs="64">0</strong></div><div><small>SEO</small><strong data-cs="81">0</strong></div><div><small>A11y</small><strong data-cs="58">0</strong></div></div>
+            <p class="console__note">Illustrative overview built from the real module list. Scores shown are an example, not a real business.</p>
+          </div>
+        </div>
+        <div class="nums" style="margin-top:20px" data-reveal><div><b>36</b><span>Python modules</span></div><div><b>35</b><span>API endpoints</span></div><div><b>~9,400</b><span>Lines of Python</span></div><div><b>~1,900</b><span>Lines of dashboard TSX</span></div></div>
+
+        <div class="cs-text">
+          <h2 data-reveal>The problem</h2>
+          <div data-reveal><p>Cold-calling a business about its website only works if you can point to something real: the site is slow on phones, its SSL certificate expires in 12 days, it has no DMARC record so its emails land in spam, or AI assistants never recommend it.</p><p>Finding that by hand takes 30 to 60 minutes per business. I wanted it in under a minute, with every claim marked as either verified or inferred, so nothing I say on a call is a guess.</p></div>
+        </div>
+
+        <div class="cs-text">
+          <h2 data-reveal>What it does</h2>
+          <div class="mods">
+            <div class="mod" data-reveal><h4>Lead discovery <small>6</small></h4><ul><li><code>harvest</code> finds businesses in a niche with no website</li><li><code>registry</code> imports from government open-data portals</li><li><code>geo_browse</code> drills State → County → City</li><li><code>batch</code> scans lists overnight and ranks them</li><li><code>contacts</code> finds who to call, from the site itself</li><li><code>calltime</code> best time to call from the area code</li></ul></div>
+            <div class="mod" data-reveal style="--d:80ms"><h4>Tech &amp; security <small>11</small></h4><ul><li><code>fingerprint</code> + <code>wappalyzer</code> detect CMS, plugins, stack</li><li><code>headers</code> grades CSP, HSTS and friends</li><li><code>ssl_audit</code> + <code>ssl_deep</code> certificate and TLS via sslyze</li><li><code>dns_audit</code> SPF, DMARC, DKIM, CAA, DNSSEC</li><li><code>subdomains</code> via Certificate Transparency</li><li><code>nvd</code> known-vulnerability lookup</li></ul></div>
+            <div class="mod" data-reveal><h4>Speed, SEO &amp; access <small>8</small></h4><ul><li><code>performance</code> Google PageSpeed Insights</li><li><code>accessibility</code> WCAG checks with axe-core</li><li><code>seo</code> + <code>aeo</code> search and AI-search readiness</li><li><code>crawl</code> + <code>pageaudit</code> beyond the homepage</li><li><code>wayback</code> site history from archive.org</li><li><code>screenshots</code> desktop + phone renders</li></ul></div>
+            <div class="mod" data-reveal style="--d:80ms"><h4>AI &amp; sales output <small>7</small></h4><ul><li><code>ai_visibility</code> asks an AI who it recommends locally</li><li><code>pitch_ai</code> writes a call pitch with Gemini</li><li><code>dossier</code> picks the few problems worth raising</li><li><code>compare</code> puts a prospect next to rivals</li><li><code>fixpack</code> ready-to-paste structured data</li><li><code>report</code> branded PDF with ReportLab</li></ul></div>
+          </div>
+        </div>
+
+        <div class="cs-text">
+          <h2 data-reveal>Architecture</h2>
+          <div data-reveal>
+<div class="arch">  Next.js 15 dashboard (React 19, TypeScript)
+     │  scan bar · X-ray · call brief · leads · harvest queue · analytics
+     ▼
+  FastAPI service (35 endpoints)  ──►  stateless analyzer: URL in → ScanResult out
+     │                                   ├─ httpx fetch (polite, passive)
+     │                                   ├─ Playwright + Chromium render
+     │                                   ├─ sslyze · dnspython · RDAP · crt.sh
+     │                                   └─ PageSpeed · NVD · Gemini · archive.org
+     ▼
+  SQLite store  ──  scan history · lead tracking · backups · CSV export</div>
+            <p style="margin-top:1.4rem">Every module writes into one shared <code class="mono">ScanResult</code> schema. That single contract is what stopped a 36-module codebase from sprawling: new checks plug in without touching the dashboard.</p>
+          </div>
+        </div>
+
+        <div class="cs-text">
+          <h2 data-reveal>Principles I held to</h2>
+          <ul class="decisions">
+            <li data-reveal><b>Passive only.</b> It reads what a site serves on a normal visit. No path brute-forcing, no probing forms, nothing a firewall would flag as an attack.</li>
+            <li data-reveal><b>Verified vs inferred.</b> Every finding carries a confidence flag. Only things the server stated directly (a header, a certificate field) are marked safe to quote.</li>
+            <li data-reveal><b>No scare tactics.</b> Exposed versions are reported as facts; the tool never claims a site “is hacked”. Wrong security claims in writing are a legal risk, not a sales tactic.</li>
+            <li data-reveal><b>Runs on a laptop.</b> One double-click starts the API and dashboard. No servers, no monthly bill.</li>
+          </ul>
+        </div>
+
+        <div class="cs-text">
+          <h2 data-reveal>Stack</h2>
+          <div class="stack" data-reveal><span>Python</span><span>FastAPI</span><span>Uvicorn</span><span>httpx</span><span>Playwright</span><span>Chromium</span><span>sslyze</span><span>dnspython</span><span>axe-core</span><span>ReportLab</span><span>SQLite</span><span>Next.js 15</span><span>React 19</span><span>TypeScript</span><span>Google Gemini API</span><span>PageSpeed Insights API</span><span>NVD API</span><span>Wappalyzer DB</span><span>RDAP</span><span>crt.sh</span><span>archive.org CDX</span></div>
+        </div>
+
+        <a href="brieflane.html" class="next" data-reveal><div><p class="label" style="margin:0 0 .4rem">Next case study</p><b>Brieflane</b></div><span class="btn btn--lime">Read <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" /></svg></span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container"><span>© 2026 Muhammad Khizr Khan · Axelink Systems LLC</span><nav><a href="../index.html#work">All work</a><a href="../index.html#contact">Contact</a></nav></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="../js/profile.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

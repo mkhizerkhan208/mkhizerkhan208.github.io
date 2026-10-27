@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>VELORA | Modern Lifestyle Store</title>
+  <meta name="description" content="VELORA: watches, sneakers, apparel, caps, beauty and everyday essentials, considered and made to last." />
+  <meta name="theme-color" content="#0f0f0f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f0f0f'/%3E%3Cpath d='M16 18l16 30 16-30' fill='none' stroke='%23e8c9a0' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__logo">VELORA</div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+
+  <!-- Announcement -->
+  <div class="announce" id="announce">
+    <div class="announce__track">
+      <span>Free shipping on orders over $75</span><i>✦</i><span>Use code <b>WELCOME10</b> for 10% off your first order</span><i>✦</i><span>30-day free returns</span><i>✦</i><span>New: Drop 04 Monolith Low is live</span><i>✦</i>
+      <span>Free shipping on orders over $75</span><i>✦</i><span>Use code <b>WELCOME10</b> for 10% off your first order</span><i>✦</i><span>30-day free returns</span><i>✦</i><span>New: Drop 04 Monolith Low is live</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <button class="icon-btn header__burger" id="burger" aria-label="Open menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10" /></svg></button>
+      <a href="#/" class="logo" aria-label="VELORA home">VELORA</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#/shop" data-nav="shop">Shop all</a>
+        <a href="#/shop?cat=watches" data-nav="watches">Watches</a>
+        <a href="#/shop?cat=footwear" data-nav="footwear">Footwear</a>
+        <a href="#/shop?cat=apparel" data-nav="apparel">Apparel</a>
+        <a href="#/shop?cat=beauty" data-nav="beauty">Beauty</a>
+        <a href="#/shop?tag=sale" data-nav="sale" class="nav__sale">Sale</a>
+      </nav>
+      <div class="header__actions">
+        <div class="currency">
+          <select id="currency" aria-label="Currency"><option>USD</option><option>EUR</option><option>GBP</option></select>
+        </div>
+        <button class="icon-btn" id="openSearch" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg></button>
+        <a class="icon-btn hide-sm" href="#/account" aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" /></svg></a>
+        <a class="icon-btn hide-sm" href="#/wishlist" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" /></svg><span class="count" data-count="wish">0</span></a>
+        <button class="icon-btn" id="openCart" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z" /><path d="M9 8V6a3 3 0 0 1 6 0v2" /></svg><span class="count" data-count="cart">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <aside class="drawer drawer--left" id="menuDrawer" aria-label="Menu">
+    <div class="drawer__head"><span class="logo">VELORA</span><button class="icon-btn" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg></button></div>
+    <nav class="mnav">
+      <a href="#/">Home</a><a href="#/shop">Shop all</a><a href="#/shop?cat=watches">Watches</a><a href="#/shop?cat=footwear">Footwear</a>
+      <a href="#/shop?cat=apparel">Apparel</a><a href="#/shop?cat=caps">Caps</a><a href="#/shop?cat=beauty">Beauty &amp; Travel</a><a href="#/shop?cat=lifestyle">Lifestyle</a>
+      <a href="#/shop?tag=sale" class="nav__sale">Sale</a><a href="#/account">Account &amp; orders</a>
+    </nav>
+  </aside>
+
+  <main id="app" tabindex="-1"></main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="logo logo--lg">VELORA</div>
+        <p>Considered essentials for everyday life. Designed to be worn, carried and loved for years.</p>
+        <div class="pay">
+          <span>VISA</span><span>Mastercard</span><span>AMEX</span><span>PayPal</span><span>Apple Pay</span>
+        </div>
+      </div>
+      <div><h4>Shop</h4><a href="#/shop?cat=watches">Watches</a><a href="#/shop?cat=footwear">Footwear</a><a href="#/shop?cat=apparel">Apparel</a><a href="#/shop?cat=caps">Caps</a><a href="#/shop?cat=beauty">Beauty &amp; Travel</a></div>
+      <div><h4>Help</h4><a href="#/account">Track order</a><a href="#/info/shipping">Shipping</a><a href="#/info/returns">Returns</a><a href="#/info/faq">FAQ</a><a href="#/info/contact">Contact</a></div>
+      <div class="footer__news">
+        <h4>Join the list</h4>
+        <p>New drops, restocks and members-only offers. No spam, ever.</p>
+        <form class="newsletter" data-newsletter><input type="email" placeholder="Email address" required aria-label="Email address" /><button class="btn btn--light">Subscribe</button></form>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 VELORA. Demo storefront built for portfolio purposes. No real orders or payments are processed.</p>
+      <p><a href="#/info/privacy">Privacy</a> · <a href="#/info/terms">Terms</a></p>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <aside class="drawer drawer--right" id="cartDrawer" aria-label="Shopping bag">
+    <div class="drawer__head"><h3>Your bag <span data-count="cart-label"></span></h3><button class="icon-btn" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg></button></div>
+    <div class="ship-meter" id="shipMeter"></div>
+    <div class="drawer__body" id="cartItems"></div>
+    <div class="drawer__foot" id="cartFoot"></div>
+  </aside>
+
+  <!-- Search -->
+  <div class="search" id="search" aria-hidden="true">
+    <div class="search__panel">
+      <div class="search__bar">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg>
+        <input id="searchInput" type="search" placeholder="Search watches, sneakers, caps…" autocomplete="off" aria-label="Search products" />
+        <button class="icon-btn" data-close aria-label="Close search"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg></button>
+      </div>
+      <div class="search__hints" id="searchHints">
+        <span>Popular:</span><button>chronograph</button><button>sneaker</button><button>cap</button><button>polo</button><button>travel</button>
+      </div>
+      <div class="search__results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- Quick view / generic modal -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__box" id="modalBox"></div>
+  </div>
+
+  <div class="scrim" id="scrim"></div>
+
+  <!-- Mobile tab bar -->
+  <nav class="tabbar" aria-label="Quick navigation">
+    <a href="#/" data-tab="home"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z" /></svg><span>Home</span></a>
+    <a href="#/shop" data-tab="shop"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5" /><rect x="13" y="4" width="7" height="7" rx="1.5" /><rect x="4" y="13" width="7" height="7" rx="1.5" /><rect x="13" y="13" width="7" height="7" rx="1.5" /></svg><span>Shop</span></a>
+    <a href="#/wishlist" data-tab="wishlist"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" /></svg><span>Wishlist</span><em class="count" data-count="wish">0</em></a>
+    <button data-tab="cart" id="tabCart"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z" /><path d="M9 8V6a3 3 0 0 1 6 0v2" /></svg><span>Bag</span><em class="count" data-count="cart">0</em></button>
+    <a href="#/account" data-tab="account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" /></svg><span>Account</span></a>
+  </nav>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

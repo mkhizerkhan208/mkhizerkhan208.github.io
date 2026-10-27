@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Contact &amp; Reservations | Velvet Bean Coffee &amp; Chocolate Bar</title>
+  <meta name="description" content="Visit, call or book a table at Velvet Bean, 418 Wythe Ave, Brooklyn." />
+  <meta name="theme-color" content="#0f0906" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f0906'/%3E%3Cpath d='M32 10c-10 0-16 10-16 22s6 22 16 22 16-10 16-22-6-22-16-22zM32 11c-5 8 5 13 0 21s5 14 0 21' fill='none' stroke='%23e2b77a' stroke-width='3'/%3E%3C/svg%3E" />
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/" } }</script>
+</head>
+<body data-page="contact">
+  <div class="curtain is-active" aria-hidden="true">
+    <svg class="curtain__mark" viewBox="0 0 64 64"><path d="M32 6c-12 0-20 12-20 26s8 26 20 26 20-12 20-26S44 6 32 6z" /><path d="M32 7c-6 9 6 16 0 25s6 17 0 25" /></svg>
+    <div class="curtain__word">Velvet <em>Bean</em></div>
+    <div class="curtain__label">Pulling your first shot</div>
+    <div class="curtain__count">0</div>
+  </div>
+
+  <main>
+    <section class="hero hero--inner">
+      <canvas class="webgl" data-scene="cup" aria-label="3D latte cup with steam and orbiting coffee beans"></canvas>
+      <div class="hero__fade"></div>
+      <div class="container hero__content">
+        <nav class="crumbs" data-hero><a href="index.html">Home</a><span>/</span><b>Contact</b></nav>
+        <p class="eyebrow" data-hero>Visit · Book · Say hello</p>
+        <h1 class="display" data-split>Come say<br /><em>hello.</em></h1>
+        <p class="lead hero__lead" data-hero>Walk-ins are always welcome. For the lounge, tastings or anything after 7pm, book a table below and we will save you the best seat.</p>
+        <div class="hero__meta" data-hero><span class="open-pill" data-open></span></div>
+      </div>
+      <div class="hero__scroll"><i></i>Scroll</div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container cinfo">
+        <a href="https://maps.google.com/?q=418+Wythe+Ave+Brooklyn" target="_blank" rel="noopener" data-reveal><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z" /><circle cx="12" cy="9" r="2.5" /></svg><small>Visit</small><b>418 Wythe Ave<br />Brooklyn, NY 11249</b></a>
+        <a href="tel:+17185550142" data-reveal style="--d:120ms"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" /></svg><small>Call</small><b>(718) 555-0142<br />Daily, 8am to 8pm</b></a>
+        <a href="mailto:hello@velvetbean.coffee" data-reveal style="--d:240ms"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg><small>Email</small><b>hello@velvetbean.coffee<br />Replies within a day</b></a>
+      </div>
+    </section>
+
+    <section class="section" id="book">
+      <div class="container booking">
+        <div>
+          <p class="eyebrow">Reservations</p>
+          <h2 class="h2" data-split>Save me<br /><em>a seat.</em></h2>
+          <p class="lead" style="margin:1.4rem 0 1rem" data-reveal>Tables are held for 15 minutes. Parties larger than 8, or anything private, use the enquiry tab and our events team will call you back.</p>
+          <div class="hours" data-hours data-reveal></div>
+        </div>
+        <div class="bform" data-reveal>
+          <div class="ftabs" id="ftabs"><button class="is-on" data-t="1">Book a table</button><button data-t="2">Event enquiry</button><i></i></div>
+          <form class="fpanel is-on" id="bookForm" novalidate>
+            <div class="fl"><span>Day</span><div class="days" id="days"></div></div>
+            <div class="fl"><span>Time</span><div class="slots" id="slots"></div></div>
+            <div class="f2">
+              <div class="fl"><span>Guests</span><div class="stepper"><button type="button" data-step="-1" aria-label="Fewer guests">&minus;</button><b id="guests">2</b><button type="button" data-step="1" aria-label="More guests">+</button></div></div>
+              <label class="fl"><span>Occasion</span><select name="occasion"><option>Just coffee</option><option>Date night</option><option>Birthday</option><option>Business meeting</option><option>Chocolate tasting</option></select></label>
+            </div>
+            <div class="fl"><span>Seating</span><div class="seats">
+              <label><input type="radio" name="seat" value="Window" checked /><span>Window<small>Street view, 2 to 4</small></span></label>
+              <label><input type="radio" name="seat" value="Bar" /><span>Espresso bar<small>Watch the baristas</small></span></label>
+              <label><input type="radio" name="seat" value="Lounge" /><span>Velvet lounge<small>Sofas, 4 to 8</small></span></label></div></div>
+            <div class="f2"><label class="fl"><span>Name</span><input name="name" required autocomplete="name" /></label><label class="fl"><span>Phone</span><input name="phone" type="tel" required autocomplete="tel" /></label></div>
+            <label class="fl"><span>Email</span><input name="email" type="email" required autocomplete="email" /></label>
+            <button class="btn btn--dark btn--block" type="submit">Confirm reservation <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>
+            <p class="fnote">Demo form: nothing is sent or stored.</p>
+          </form>
+          <form class="fpanel" id="enqForm" novalidate>
+            <div class="f2"><label class="fl"><span>Name</span><input name="name" required /></label><label class="fl"><span>Email</span><input name="email" type="email" required /></label></div>
+            <div class="f2"><label class="fl"><span>Experience</span><select name="type"><option>Private event</option><option>Barista masterclass</option><option>Chocolate tasting</option><option>Coffee cart &amp; catering</option><option>Corporate gifting</option></select></label><label class="fl"><span>Date</span><input name="date" type="date" required /></label></div>
+            <label class="fl"><span>Tell us more</span><textarea name="msg" rows="4" required placeholder="Guests, budget, anything special"></textarea></label>
+            <button class="btn btn--dark btn--block" type="submit">Send enquiry <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>
+            <p class="fnote">Demo form: nothing is sent or stored.</p>
+          </form>
+          <div class="ticket" id="ticket"><div class="ticket__check"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg></div><h3 id="tTitle">You are booked.</h3><p id="tSub"></p><div class="ticket__stub" id="tStub"></div><button class="btn btn--dark btn--sm" id="tAgain" style="margin-top:1rem">Make another</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="map" data-reveal>
+          <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="1600" height="900" fill="#1b120d" />
+            <path d="M0 640 C 300 600, 520 700, 820 640 S 1300 560, 1600 610 L1600 900 L0 900Z" fill="#132029" />
+            <g stroke="#2e2019" stroke-width="18" fill="none"><path d="M0 200H1600M0 380H1600M0 520H1600M200 0V640M520 0V640M880 0V660M1180 0V620M1420 0V600" /></g>
+            <g stroke="#3a2a20" stroke-width="7" fill="none"><path d="M0 290H1600M0 450H1600M360 0V640M700 0V650M1040 0V650M1300 0V610" /></g>
+            <path d="M-20 120 L 1620 560" stroke="#4a3526" stroke-width="30" fill="none" />
+            <g fill="#241812"><rect x="230" y="220" width="110" height="140" rx="6" /><rect x="550" y="400" width="130" height="100" rx="6" /><rect x="1060" y="220" width="100" height="140" rx="6" /><rect x="1200" y="400" width="80" height="100" rx="6" /><rect x="720" y="220" width="140" height="60" rx="6" /></g>
+            <rect x="400" y="80" width="260" height="120" rx="20" fill="#1f2a1a" />
+            <g fill="#8c7a6c" font-family="Sora, sans-serif" font-size="22" letter-spacing="4"><text x="30" y="190">N 6TH ST</text><text x="30" y="370">N 7TH ST</text><text x="1210" y="510">KENT AVE</text><text x="890" y="120" transform="rotate(90 890 120)">WYTHE AVE</text><text x="430" y="150">MCCARREN PARK</text><text x="1180" y="720">EAST RIVER</text></g>
+          </svg>
+          <div class="map__pin"><b>Velvet Bean</b><i></i></div>
+          <div class="map__card"><b>418 Wythe Ave</b>4 min from Bedford Av (L) · Bike racks outside</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-footer></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

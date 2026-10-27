@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Velvet Bean | Coffee &amp; Chocolate Bar, Brooklyn</title>
+  <meta name="description" content="Velvet Bean: single-origin espresso, bean-to-bar chocolate and slow evenings in Williamsburg, Brooklyn." />
+  <meta name="theme-color" content="#0f0906" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f0906'/%3E%3Cpath d='M32 10c-10 0-16 10-16 22s6 22 16 22 16-10 16-22-6-22-16-22zM32 11c-5 8 5 13 0 21s5 14 0 21' fill='none' stroke='%23e2b77a' stroke-width='3'/%3E%3C/svg%3E" />
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/" } }</script>
+</head>
+<body data-page="index">
+  <div class="curtain is-active" aria-hidden="true">
+    <svg class="curtain__mark" viewBox="0 0 64 64"><path d="M32 6c-12 0-20 12-20 26s8 26 20 26 20-12 20-26S44 6 32 6z" /><path d="M32 7c-6 9 6 16 0 25s6 17 0 25" /></svg>
+    <div class="curtain__word">Velvet <em>Bean</em></div>
+    <div class="curtain__label">Pulling your first shot</div>
+    <div class="curtain__count">0</div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <canvas class="webgl" data-scene="orb" aria-label="3D liquid coffee sculpture with orbiting beans and ice"></canvas>
+      <div class="hero__fade"></div>
+      <div class="hero__side">Williamsburg · Brooklyn · Est. 2019</div>
+      <div class="container hero__content">
+        <p class="eyebrow" data-hero>Coffee · Chocolate · Bar</p>
+        <h1 class="display" data-split>Pour something<br /><em>darker.</em></h1>
+        <p class="lead hero__lead" data-hero>Single-origin espresso, bean-to-bar chocolate and slow, candlelit evenings. A coffee bar built for people who linger.</p>
+        <div class="hero__meta" data-hero>
+          <div class="hero__actions">
+            <a href="menu.html" class="btn btn--caramel magnetic">Explore the menu <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a href="contact.html#book" class="btn btn--ghost magnetic">Book a table</a>
+          </div>
+          <div class="hero__stats">
+            <div><b>4.9</b><span>2,300+ reviews</span></div>
+            <div><b>72%</b><span>House cacao</span></div>
+            <div><span class="open-pill" data-open></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll"><i></i>Scroll</div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee__track">
+      <span>Espresso</span><i></i><span>Bean-to-bar</span><i></i><span>Cold brew</span><i></i><span>Truffles</span><i></i><span>Matcha</span><i></i><span>Late nights</span><i></i>
+      <span>Espresso</span><i></i><span>Bean-to-bar</span><i></i><span>Cold brew</span><i></i><span>Truffles</span><i></i><span>Matcha</span><i></i><span>Late nights</span><i></i>
+    </div></div>
+
+    <!-- INTRO -->
+    <section class="section">
+      <div class="container intro">
+        <div class="intro__media">
+          <div class="media media--parallax" data-reveal="clip" data-parallax data-cursor="Pour"><img src="assets/img/latte-pour.jpg" alt="Barista pouring a rosetta into a flat white" /></div>
+          <div class="intro__badge"><svg viewBox="0 0 200 200"><defs><path id="bc" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs><text><textPath href="#bc">ROASTED IN BROOKLYN • POURED BY HAND •</textPath></text></svg><b>VB</b></div>
+        </div>
+        <div>
+          <p class="eyebrow">Our craft</p>
+          <p class="scrub" data-scrub>We roast twice a week, temper chocolate every morning and pull every shot by hand. Nothing here is rushed, least of all you.</p>
+          <div class="intro__list">
+            <div data-reveal><b data-count="14">0</b><span>Single-origin beans on rotation</span></div>
+            <div data-reveal style="--d:120ms"><b data-count="36" data-suf="h">0</b><span>Cold brew steep time</span></div>
+            <div data-reveal style="--d:240ms"><b data-count="72" data-suf="%">0</b><span>House dark chocolate</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE DRINKS (pinned horizontal) -->
+    <section class="hs" id="signatures">
+      <div class="hs__pin">
+        <div class="container hs__head">
+          <div><p class="eyebrow">Signatures</p><h2 class="h2" data-split>Drinks worth<br /><em>crossing the bridge</em> for.</h2></div>
+          <div class="hs__progress"><i></i></div>
+        </div>
+        <div class="hs__track">
+          <article class="drink" data-cursor="Taste"><img src="assets/img/iced-splash.jpg" alt="Iced latte bursting with a coffee splash" /><span class="drink__price">$7.50</span><div class="drink__body"><span class="drink__no">01 · COLD</span><h3>Velvet Iced Latte</h3><p>Double ristretto, oat milk, burnt-sugar syrup.</p></div></article>
+          <article class="drink" data-cursor="Taste"><img src="assets/img/caramel-frappe.jpg" alt="Salted caramel frappé with whipped cream" /><span class="drink__price">$8.50</span><div class="drink__body"><span class="drink__no">02 · BLENDED</span><h3>Salted Caramel Cloud</h3><p>Espresso, house caramel, Maldon salt, cream.</p></div></article>
+          <article class="drink" data-cursor="Taste"><img src="assets/img/matcha-cloud.jpg" alt="Matcha frappé with whipped cream and matcha cake" /><span class="drink__price">$8.00</span><div class="drink__body"><span class="drink__no">03 · CEREMONIAL</span><h3>Matcha Cloud</h3><p>Uji matcha, white chocolate, sponge crumb.</p></div></article>
+          <article class="drink" data-cursor="Taste"><img src="assets/img/iced-latte.jpg" alt="Iced latte in a glass can on a wooden board" /><span class="drink__price">$6.50</span><div class="drink__body"><span class="drink__no">04 · SLOW</span><h3>36-Hour Cold Brew</h3><p>Ethiopia Guji, steeped cold, swirled with cream.</p></div></article>
+          <article class="drink" data-cursor="Taste"><img src="assets/img/choc-shake.jpg" alt="Thick dark chocolate shake" /><span class="drink__price">$9.00</span><div class="drink__body"><span class="drink__no">05 · CACAO</span><h3>72% Chocolate Shake</h3><p>House dark chocolate, espresso, shaved cacao.</p></div></article>
+          <article class="drink" data-cursor="Taste"><img src="assets/img/iced-duo.jpg" alt="Iced coffee duo with espresso tonic" /><span class="drink__price">$7.00</span><div class="drink__body"><span class="drink__no">06 · SPARKLING</span><h3>Espresso Tonic Duo</h3><p>Yuzu tonic, lemon, a floated double shot.</p></div></article>
+          <div class="drink drink--end"><p class="eyebrow" style="color:#2a1911">Full menu</p><h3>24 drinks, 18 desserts, zero shortcuts.</h3><a href="menu.html" class="btn btn--dark">See everything <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHOCOLATE ATELIER -->
+    <section class="section on-cream">
+      <div class="container atelier">
+        <div class="atelier__stack">
+          <div class="media m1 media--parallax" data-reveal="clip" data-parallax><img src="assets/img/chocolatiers.jpg" alt="Miniature chocolatiers pouring ganache over stacked chocolate" /></div>
+          <div class="media m2" data-reveal="clip" style="--d:150ms"><img src="assets/img/praline-case.jpg" alt="Box of assorted pralines and truffles" /></div>
+          <div class="media m3" data-reveal="clip" style="--d:300ms"><img src="assets/img/choc-drip.jpg" alt="Molten chocolate poured over dark chocolate blocks" /></div>
+        </div>
+        <div>
+          <p class="eyebrow">The chocolate atelier</p>
+          <h2 class="h2" data-split>Tempered at dawn.<br /><em>Gone by dusk.</em></h2>
+          <p class="lead" data-reveal style="margin-top:1.4rem">Our chocolatier works in a glass-walled kitchen behind the bar, turning single-estate cacao into truffles, bars and bonbons in small batches every morning.</p>
+          <ul class="plist" data-reveal>
+            <li><b>Salted Caramel Truffle</b><span>$3.50</span><small>72% ganache, Maldon salt, gold leaf</small></li>
+            <li><b>Espresso Praline</b><span>$3.50</span><small>Hazelnut, our house espresso roast</small></li>
+            <li><b>The Atelier Box · 16 pieces</b><span>$48</span><small>Chef’s daily selection, hand-packed to order</small></li>
+          </ul>
+          <a href="experiences.html#tasting" class="btn btn--dark magnetic" style="margin-top:2rem">Book a tasting flight <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEAN TO CUP -->
+    <section class="section">
+      <div class="container">
+        <div class="sec-head">
+          <div><p class="eyebrow">Bean to cup</p><h2 class="h2" data-split>Four steps.<br /><em>No shortcuts.</em></h2></div>
+          <a href="story.html" class="btn btn--ghost magnetic">Read our story</a>
+        </div>
+        <div class="steps">
+          <div class="step" data-reveal><div class="step__n">01</div><h4>Source</h4><p>Direct-trade lots from farms in Ethiopia, Colombia and Guatemala, paid well above fair-trade price.</p></div>
+          <div class="step" data-reveal style="--d:100ms"><div class="step__n">02</div><h4>Roast</h4><p>Small batches on a 15kg drum roaster in Brooklyn, twice a week, rested for flavour.</p></div>
+          <div class="step" data-reveal style="--d:200ms"><div class="step__n">03</div><h4>Grind</h4><p>Dialled in every morning, weighed to the tenth of a gram for every single shot.</p></div>
+          <div class="step" data-reveal style="--d:300ms"><div class="step__n">04</div><h4>Pour</h4><p>Hand-steamed milk and latte art from baristas trained in our in-house academy.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES TEASER -->
+    <section class="section on-roast">
+      <div class="container">
+        <div class="sec-head">
+          <div><p class="eyebrow">Beyond the cup</p><h2 class="h2" data-split>Experiences<br /><em>worth sharing.</em></h2></div>
+          <p class="lead" data-reveal>Private evenings, barista masterclasses and chocolate tastings for up to 60 guests.</p>
+        </div>
+        <div class="xcards">
+          <a href="experiences.html#events" class="xcard" data-tilt data-reveal><img src="assets/img/interior.jpg" alt="Warm café interior with velvet chairs" /><span class="xcard__go"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" /></svg></span><div class="xcard__body"><small>From $45 / guest</small><h3>Private Events</h3><p>Hire the whole bar after hours.</p></div></a>
+          <a href="experiences.html#class" class="xcard" data-tilt data-reveal style="--d:120ms"><img src="assets/img/espresso-bar.jpg" alt="Espresso machine and grinder with two cappuccinos" /><span class="xcard__go"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" /></svg></span><div class="xcard__body"><small>$85 / person</small><h3>Barista Masterclass</h3><p>Espresso, milk and latte art in 3 hours.</p></div></a>
+          <a href="experiences.html#tasting" class="xcard" data-tilt data-reveal style="--d:240ms"><img src="assets/img/dark-stack.jpg" alt="Stack of broken dark chocolate dusted with cacao" /><span class="xcard__go"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" /></svg></span><div class="xcard__body"><small>$38 / person</small><h3>Chocolate Tasting</h3><p>Six origins, six pairings.</p></div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section quotes">
+      <div class="container">
+        <div class="stars" data-reveal>★★★★★</div>
+        <div class="quotes__stage" id="quotes">
+          <blockquote class="quote is-on"><p>“The salted caramel cloud is dangerous. The room is even more dangerous: I came for one coffee and stayed four hours.”</p><cite>Sample review · Local guide</cite></blockquote>
+          <blockquote class="quote"><p>“Best flat white in Williamsburg, and the truffles are genuinely world-class. Book the tasting flight.”</p><cite>Sample review · Food writer</cite></blockquote>
+          <blockquote class="quote"><p>“We hosted our engagement party here. Candles, chocolate, espresso martinis. Every guest asked for the name.”</p><cite>Sample review · Private event</cite></blockquote>
+        </div>
+        <div class="quotes__nav" id="qnav"><button class="is-on" aria-label="Review 1"></button><button aria-label="Review 2"></button><button aria-label="Review 3"></button></div>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit">
+      <div class="visit__bg" data-parallax><img src="assets/img/storefront.jpg" alt="Velvet Bean storefront glowing on a rainy evening" /></div>
+      <div class="container">
+        <div class="visit__card">
+          <p class="eyebrow">Visit us</p>
+          <h2 class="h2" data-split>Come in<br /><em>from the rain.</em></h2>
+          <div class="hours" data-hours></div>
+          <div class="hero__actions"><a href="contact.html" class="btn btn--caramel magnetic">Get directions <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a><a href="tel:+17185550142" class="btn btn--ghost">(718) 555-0142</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-footer></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

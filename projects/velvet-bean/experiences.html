@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Experiences | Velvet Bean Coffee &amp; Chocolate Bar</title>
+  <meta name="description" content="Private events, barista masterclasses, chocolate tastings, coffee cart catering and corporate gifting." />
+  <meta name="theme-color" content="#0f0906" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f0906'/%3E%3Cpath d='M32 10c-10 0-16 10-16 22s6 22 16 22 16-10 16-22-6-22-16-22zM32 11c-5 8 5 13 0 21s5 14 0 21' fill='none' stroke='%23e2b77a' stroke-width='3'/%3E%3C/svg%3E" />
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/" } }</script>
+</head>
+<body data-page="experiences">
+  <div class="curtain is-active" aria-hidden="true">
+    <svg class="curtain__mark" viewBox="0 0 64 64"><path d="M32 6c-12 0-20 12-20 26s8 26 20 26 20-12 20-26S44 6 32 6z" /><path d="M32 7c-6 9 6 16 0 25s6 17 0 25" /></svg>
+    <div class="curtain__word">Velvet <em>Bean</em></div>
+    <div class="curtain__label">Pulling your first shot</div>
+    <div class="curtain__count">0</div>
+  </div>
+
+  <main>
+    <section class="hero hero--inner">
+      <canvas class="webgl" data-scene="ice" aria-label="3D ice and caramel cubes floating with coffee beans"></canvas>
+      <div class="hero__fade"></div>
+      <div class="container hero__content">
+        <nav class="crumbs" data-hero><a href="index.html">Home</a><span>/</span><b>Experiences</b></nav>
+        <p class="eyebrow" data-hero>Events · Classes · Tastings · Catering</p>
+        <h1 class="display" data-split>Beyond<br /><em>the cup.</em></h1>
+        <p class="lead hero__lead" data-hero>Private evenings, hands-on barista classes, chocolate tastings and a coffee cart that travels to you. Crafted with the same care as every shot we pour.</p>
+      </div>
+      <div class="hero__scroll"><i></i>Scroll</div>
+    </section>
+
+    <section class="section">
+      <div class="container svc">
+        <div class="svc__visual">
+          <div class="svc__frame" id="svcFrame" data-cursor="Book">
+            <img class="is-on" src="assets/img/interior.jpg" alt="Café interior prepared for a private event" />
+            <img src="assets/img/espresso-bar.jpg" alt="Espresso machine used in the barista masterclass" />
+            <img src="assets/img/praline-case.jpg" alt="Assorted chocolates for the tasting flight" />
+            <img src="assets/img/iced-duo.jpg" alt="Iced coffees served from the coffee cart" />
+            <img src="assets/img/bonbon-box.jpg" alt="Gift box of chocolate bonbons" />
+            <div class="svc__counter"><span id="svcNum">01</span><small> / 05</small></div>
+          </div>
+        </div>
+        <div class="svc__list">
+          <article class="svc__item is-on" id="events" data-i="0"><div class="svc__img-m"><img src="assets/img/interior.jpg" alt="" /></div><p class="eyebrow">01 · Private events</p><h2 class="h3">The whole bar, <em>after hours.</em></h2><p>Birthdays, launches, engagement parties and late-night dinners for up to 60 guests. Espresso martinis, a dessert bar and our team behind the counter.</p><ul><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Exclusive use from 7pm</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Custom drinks menu &amp; branding</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Dessert and truffle station</li></ul><p class="svc__from">From <b>$45 / guest</b></p></article>
+          <article class="svc__item" id="class" data-i="1"><div class="svc__img-m"><img src="assets/img/espresso-bar.jpg" alt="" /></div><p class="eyebrow">02 · Barista masterclass</p><h2 class="h3">Pull the <em>perfect shot.</em></h2><p>Three hours on our La Marzocco with a head barista: dialing in, milk texture, and your first rosetta. Small groups of six, Saturdays at 10am.</p><ul><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Hands-on machine time</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> 250g bag of house espresso</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Certificate &amp; recipe card</li></ul><p class="svc__from">Only <b>$85 / person</b></p></article>
+          <article class="svc__item" id="tasting" data-i="2"><div class="svc__img-m"><img src="assets/img/praline-case.jpg" alt="" /></div><p class="eyebrow">03 · Chocolate tasting flight</p><h2 class="h3">Six origins, <em>six pairings.</em></h2><p>Our chocolatier guides you from 55% Ecuador to 85% Madagascar, each paired with a coffee or natural wine. Thursday and Friday evenings.</p><ul><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> 6 single-estate chocolates</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Coffee or wine pairings</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> 10% off the atelier boutique</li></ul><p class="svc__from">Only <b>$38 / person</b></p></article>
+          <article class="svc__item" id="catering" data-i="3"><div class="svc__img-m"><img src="assets/img/iced-duo.jpg" alt="" /></div><p class="eyebrow">04 · Coffee cart &amp; catering</p><h2 class="h3">We bring <em>the bar to you.</em></h2><p>A fully staffed espresso and cold brew cart for offices, weddings and film sets across NYC, with pastries and chocolate to match.</p><ul><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Two baristas, unlimited drinks</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Oat and dairy-free options</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Branded cups available</li></ul><p class="svc__from">From <b>$950 / event</b></p></article>
+          <article class="svc__item" id="gifting" data-i="4"><div class="svc__img-m"><img src="assets/img/bonbon-box.jpg" alt="" /></div><p class="eyebrow">05 · Corporate gifting</p><h2 class="h3">Gifts people <em>actually eat.</em></h2><p>Hand-packed bonbon boxes, coffee subscriptions and gift cards, with custom sleeves and nationwide shipping for teams of 10 to 1,000.</p><ul><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Custom branded packaging</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Nationwide cold-chain shipping</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Volume pricing from 25 boxes</li></ul><p class="svc__from">From <b>$32 / box</b></p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section on-cream">
+      <div class="container">
+        <div class="sec-head"><div><p class="eyebrow">Event packages</p><h2 class="h2" data-split>Pick your <em>evening.</em></h2></div><p class="lead" data-reveal>All packages include staff, set-up and clean-down. Prices per guest, minimum 15.</p></div>
+        <div class="tiers">
+          <div class="tier" data-tilt data-reveal><h3>Espresso</h3><div class="tier__price">$45<small> / guest</small></div><p>Relaxed daytime gatherings.</p><ul><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> 2 hours, unlimited coffee</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Pastry &amp; cookie board</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Up to 25 guests</li></ul><a href="contact.html#book" class="btn btn--dark btn--block">Enquire</a></div>
+          <div class="tier tier--hot" data-tilt data-reveal style="--d:120ms"><span class="tier__tag">Most booked</span><h3>Velvet</h3><div class="tier__price">$75<small> / guest</small></div><p>Our signature evening.</p><ul><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> 3 hours, exclusive use</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Espresso martini bar</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Truffle &amp; dessert station</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Up to 45 guests</li></ul><a href="contact.html#book" class="btn btn--caramel btn--block">Enquire</a></div>
+          <div class="tier" data-tilt data-reveal style="--d:240ms"><h3>Atelier</h3><div class="tier__price">$120<small> / guest</small></div><p>The full chocolate experience.</p><ul><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> 4 hours, exclusive use</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Live chocolate tasting</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Take-home atelier box</li><li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" /></svg> Up to 60 guests</li></ul><a href="contact.html#book" class="btn btn--dark btn--block">Enquire</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="quote-tool" data-reveal>
+          <div>
+            <p class="eyebrow">Instant estimate</p>
+            <h2 class="h2" style="margin-bottom:2rem">Plan it in <em>30 seconds.</em></h2>
+            <form id="qtool">
+              <div class="range-f"><label>Guests <b id="qGuestsV">30</b></label><input type="range" name="guests" min="15" max="60" value="30" aria-label="Guests" /></div>
+              <div class="range-f"><label>Hours <b id="qHoursV">3</b></label><input type="range" name="hours" min="2" max="5" value="3" aria-label="Hours" /></div>
+              <div class="opt"><h4>Package</h4><div class="chips">
+                <label><input type="radio" name="pkg" value="45" /><span>Espresso</span></label>
+                <label><input type="radio" name="pkg" value="75" checked /><span>Velvet</span></label>
+                <label><input type="radio" name="pkg" value="120" /><span>Atelier</span></label></div></div>
+              <div class="opt" style="margin-top:1.4rem"><h4>Add-ons</h4><div class="chips">
+                <label><input type="checkbox" name="add" value="12" /><span>Latte-art station <small>+$12pp</small></span></label>
+                <label><input type="checkbox" name="add" value="9" /><span>Take-home truffles <small>+$9pp</small></span></label>
+                <label><input type="checkbox" name="add" value="6" /><span>Live music <small>+$6pp</small></span></label></div></div>
+            </form>
+          </div>
+          <div class="quote-out"><small>Estimated total</small><b id="qTotal">$2,250</b><p id="qNote">30 guests · 3 hours · Velvet</p><a href="contact.html#book" class="btn btn--caramel btn--block magnetic">Request this quote <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section on-cream">
+      <div class="container">
+        <div class="sec-head"><div><p class="eyebrow">Good to know</p><h2 class="h2" data-split>Questions, <em>answered.</em></h2></div></div>
+        <div class="faq" data-reveal>
+          <details open><summary>How far ahead should I book an event?<i>+</i></summary><p>Two to three weeks is ideal for private hire. Classes and tastings can usually be booked up to 48 hours before.</p></details>
+          <details><summary>Can you handle dietary requirements?<i>+</i></summary><p>Yes. We offer oat, almond and lactose-free milk, and our chocolatier makes vegan and gluten-free truffles on request.</p></details>
+          <details><summary>Do you travel outside Brooklyn?<i>+</i></summary><p>Our coffee cart covers all five boroughs and northern New Jersey. Travel beyond 25 miles is quoted separately.</p></details>
+          <details><summary>Is there a deposit?<i>+</i></summary><p>A 25% deposit secures your date, fully refundable up to 14 days before the event.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-footer></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>
